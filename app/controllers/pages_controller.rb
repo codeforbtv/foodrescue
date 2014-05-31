@@ -4,8 +4,8 @@ class PagesController < ApplicationController
 
     def type_post
         survey_response = {
-            "is_prepared_or_processed" => request.POST['answer'].to_i == 1 ? true : false
-        }
+		"is_prepared_or_processed" => request.POST['answer'].to_i == 1 ? true : false
+	}
 
         # Save to session
         session[:survey_response] = survey_response.to_json
@@ -19,11 +19,21 @@ class PagesController < ApplicationController
     end
 
     def opened
-        @survey_response = JSON.parse(session[:survey_response])
     end
 
     def opened_post
-        redirect_to "/danger-zone"
+	survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_opened"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # If not human consumable, redirect to results
+        if survey_response["is_opened"]
+            redirect_to "/results"
+        else
+            redirect_to "/danger-zone"
+        end
     end
 
     def danger_zone
