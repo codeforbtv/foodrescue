@@ -3,10 +3,24 @@ class PagesController < ApplicationController
     end
 
     def type_post
-        redirect_to "/opened"
+        # TODO: Pull survey_response from session
+        survey_response = {
+            is_prepared_or_processed: request.POST['answer'].to_i == 1 ? true : false
+        }
+
+        # TODO: Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # TODO: Check if NOT human consumable, redirect to results
+        if survey_response.is_prepared_or_processed:
+            redirect_to "/opened"
+        else
+            redirect_to "/opened"
+        end
     end
 
     def opened
+        @survey_response = JSON.parse(session[:survey_response])
     end
 
     def opened_post
