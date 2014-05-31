@@ -33,3 +33,7 @@ rails s
 
 then `open http://localhost:3000`
 
+## Misc
+
+https://github.com/kristianmandrup/geo_point
+
