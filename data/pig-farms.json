@@ -1,0 +1,1459 @@
+[
+    {
+        "address": "385 Vermont Rte 110",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Tunbridge",
+        "description": "",
+        "email": "anotherbutton@gmail.com",
+        "id": 86,
+        "keywords": "",
+        "lat": 43.900433,
+        "lon": -72.486366,
+        "name": "Another Button Farm",
+        "phone": "",
+        "products": "Turkey, chicken, pork, eggs",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05077"
+    },
+    {
+        "address": "3207 Birch Hill Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Brandon",
+        "description": "",
+        "email": "",
+        "id": 151,
+        "keywords": "",
+        "lat": 43.765087,
+        "lon": -73.025291,
+        "name": "Bailey Farm",
+        "phone": "",
+        "products": "Hogs",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05733"
+    },
+    {
+        "address": "1030 Boardman Hill Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "West Rutland",
+        "description": "",
+        "email": "boardmanhillfarm@comcast.net",
+        "id": 331,
+        "keywords": "Organic mixed vegetables, eggs, pork, herbs, pickles, jams",
+        "lat": 43.583836,
+        "lon": -73.021561,
+        "name": "Boardman Hill Farm",
+        "phone": "8027474442",
+        "products": "Organic mixed vegetables, eggs, pork, herbs, pickles, jams",
+        "state": "VT",
+        "url": "http://boardmanhillfarm.com/",
+        "users": [],
+        "zip": "05777"
+    },
+    {
+        "address": "200 Leduc Farm Drive",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Shelburne",
+        "description": "",
+        "email": "",
+        "id": 397,
+        "keywords": "Bread, raw milk, winter greens, grass-fed beef, eggs, pastured pork",
+        "lat": 44.4084719,
+        "lon": -73.164591,
+        "name": "Bread and Butter Farm",
+        "phone": "(802) 985-9200",
+        "products": "Bread, raw milk, winter greens, grass-fed beef, eggs, pastured pork",
+        "state": "VT",
+        "url": "http://www.breadandbutterfarm.com/",
+        "users": [],
+        "zip": "05482"
+    },
+    {
+        "address": "570 Lavender Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Brookfield",
+        "description": "",
+        "email": "brotherlyfarm@yahoo.com",
+        "id": 433,
+        "keywords": "Organic milk, beef, chicken, turkey, pork, hay",
+        "lat": 43.998142,
+        "lon": -72.59333,
+        "name": "Brotherly Farms Organic",
+        "phone": "8022769904",
+        "products": "Organic milk, beef, chicken, turkey, pork, hay",
+        "state": "VT",
+        "url": "http://www.brotherlyfarm.com/",
+        "users": [],
+        "zip": "05036"
+    },
+    {
+        "address": "69 Lamb Hill Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Wells",
+        "description": "",
+        "email": "info@brownboarfarm.com",
+        "id": 436,
+        "keywords": "Pork, heirloom vegetables",
+        "lat": 43.4156791,
+        "lon": -73.1432675,
+        "name": "Brown Boar Farm",
+        "phone": "8023252461",
+        "products": "Pork, heirloom vegetables",
+        "state": "VT",
+        "url": "http://www.brownboarfarm.com/",
+        "users": [],
+        "zip": "05774"
+    },
+    {
+        "address": "534 Smith Hill Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Northfield",
+        "description": "",
+        "email": "callahan@tds.net",
+        "id": 525,
+        "keywords": "Vegetables, chicken, lamb, pork.",
+        "lat": 44.125793,
+        "lon": -72.683701,
+        "name": "Callahan Farm",
+        "phone": "8024857889",
+        "products": "Vegetables, chicken, lamb, pork.",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05663"
+    },
+    {
+        "address": "2587 Main St",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Waitsfield",
+        "description": "",
+        "email": "gaylordfarm@gmavt.net",
+        "id": 1340,
+        "keywords": "Beef, pork, chicken, eggs, mixed vegetables",
+        "lat": 44.208652,
+        "lon": -72.799751,
+        "name": "Gaylord Farm",
+        "phone": "8024965054",
+        "products": "Beef, pork, chicken, eggs, mixed vegetables",
+        "state": "VT",
+        "url": "http://www.gaylordfarm.com",
+        "users": [],
+        "zip": "05673"
+    },
+    {
+        "address": "206 Sugarbush Farm Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Colchester",
+        "description": "The farm has been producing lamb, wool, beef, pork, poultry and pure Vermont maple syrup and maple confections since 1987 as naturally as possible.",
+        "email": "hillisfarm@gmail.com",
+        "id": 4499,
+        "keywords": "Lamb, wool, beef, pork, poultry, pure Vermont maple syrup and maple confections, and wine.",
+        "lat": 44.5941,
+        "lon": -73.195268,
+        "name": "Hillis' Sugarbush Farm and Vineyard",
+        "phone": "(802) 893-2928",
+        "products": "Lamb, wool, beef, pork, poultry, pure Vermont maple syrup and maple confections, and wine.",
+        "state": "Vermont",
+        "url": "http://www.hillisfarm.com/",
+        "users": [],
+        "zip": "05446"
+    },
+    {
+        "address": "973 Sniderbrook Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Westfield",
+        "description": "",
+        "email": "laini@lazyladyfarm.com",
+        "id": 1976,
+        "keywords": "Goat's milk cheese, cow's milk cheese",
+        "lat": 44.851517,
+        "lon": -72.4511799,
+        "name": "Lazy Lady Farm",
+        "phone": "8027446365",
+        "products": "Goat's milk cheese, cow's milk cheese",
+        "state": "VT",
+        "url": "http://www.lazyladyfarm.com/",
+        "users": [],
+        "zip": "05874"
+    },
+    {
+        "address": "565 McDowell Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Danville",
+        "description": "",
+        "email": "debvince@danvillevt.net",
+        "id": 2008,
+        "keywords": "",
+        "lat": 44.465043,
+        "lon": -72.124736,
+        "name": "Lewis Creek Jerseys\\Badger Brook Meats",
+        "phone": "(802) 748-8461",
+        "products": "Organic beef, hay",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05828"
+    },
+    {
+        "address": "4884 East Bethel Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Randolph Center",
+        "description": "",
+        "email": "sam@lincolnfarmproduce.com",
+        "id": 2019,
+        "keywords": "Mixed vegetables, fruit, herbs, pork, poultry, eggs, Wine grapes",
+        "lat": 43.878696,
+        "lon": -72.591301,
+        "name": "Lincoln Farm",
+        "phone": "8027284273",
+        "products": "Mixed vegetables, fruit, herbs, pork, poultry, eggs, wine grapes",
+        "state": "VT",
+        "url": "http://lincolnfarmproduce.com",
+        "users": [],
+        "zip": "05061"
+    },
+    {
+        "address": "96 Boles Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "South Royalton",
+        "description": "",
+        "email": "lunableufarm@myfairpoint.net",
+        "id": 2087,
+        "keywords": "Organic mixed vegetables, pork, chicken, eggs, beef",
+        "lat": 43.8484163,
+        "lon": -72.5246087,
+        "name": "Luna Bleu Farm",
+        "phone": "8027637981",
+        "products": "Organic mixed vegetables, pork, chicken, eggs, beef",
+        "state": "VT",
+        "url": "http://lunableufarm.org/",
+        "users": [],
+        "zip": "05068"
+    },
+    {
+        "address": "785 Menard Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Cabot",
+        "description": "",
+        "email": "emmasticker915@aol.com",
+        "id": 2160,
+        "keywords": "Organic milk, grass-fed beef, hay, maple syrup, pork",
+        "lat": 44.414204,
+        "lon": -72.287041,
+        "name": "Maple Lane Farm",
+        "phone": "8025632646",
+        "products": "Organic milk, grass-fed beef, hay, maple syrup, pork",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05647"
+    },
+    {
+        "address": "1340 Carse Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Huntington",
+        "description": "We are a pasture-based sustainable diversified livestock, organic vegetable and maple syrup farm located in the Green Mountains of Vermont.",
+        "email": "info@maplewindfarm.com",
+        "id": 2171,
+        "keywords": "Organic beef, lamb, pork, turkey, maple syrup",
+        "lat": 44.243784826956,
+        "lon": -72.942073345184,
+        "name": "Maple Wind Farm",
+        "phone": "8024347257",
+        "products": "Organic beef, lamb, pork, turkey, maple syrup",
+        "state": "VT",
+        "url": "http://maplewindfarm.com/",
+        "users": [],
+        "zip": "05462"
+    },
+    {
+        "address": "131 Wardon Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Putney",
+        "description": "",
+        "email": "meadowdalefarmvt@yahoo.com",
+        "id": 2267,
+        "keywords": "Chicken, eggs, beef, pork, veal, pasture raised",
+        "lat": 42.981512,
+        "lon": -72.486264,
+        "name": "Meadowdale Farm",
+        "phone": "8023801014",
+        "products": "Chicken, eggs, beef, pork, veal",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05346"
+    },
+    {
+        "address": "1368 West Street",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Cornwall",
+        "description": "",
+        "email": "Marc@meetingplacepastures.com",
+        "id": 2269,
+        "keywords": "Grassfed beef, pork, poultry, veal, eggs",
+        "lat": 43.96172,
+        "lon": -73.252762,
+        "name": "Meeting Place Pastures",
+        "phone": "8024623759",
+        "products": "Grassfed beef, pork, poultry, veal, eggs",
+        "state": "VT",
+        "url": "http://www.meetingplacepastures.com/",
+        "users": [],
+        "zip": "05753"
+    },
+    {
+        "address": "3270 Rt 315",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Rupert",
+        "description": "http://merckforest.org",
+        "email": "",
+        "id": 2279,
+        "keywords": "Organic maple syrup, pastured pork, pastured chickens, eggs, grass-fed lamb, raspberries, blueberries, garlic, potatoes",
+        "lat": 43.2617998,
+        "lon": -73.220156,
+        "name": "Merck Forest & Farmland Center",
+        "phone": "(802) 394-7836",
+        "products": "Organic maple syrup, pastured pork, pastured chickens, eggs, grass-fed lamb, raspberries, blueberries, garlic, potatoes",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05768"
+    },
+    {
+        "address": "178 Mile Hill",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Springfield",
+        "description": "",
+        "email": "",
+        "id": 2307,
+        "keywords": "Raw milk, beef, pork, lamb, free-range chicken, vegetables, apples, honey, and berries",
+        "lat": 43.323303,
+        "lon": -72.468811,
+        "name": "Mile Hill Farm",
+        "phone": "(802) 885-5409",
+        "products": "Raw milk, beef, pork, lamb, free-range chicken, vegetables, apples, honey, and berries",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05156"
+    },
+    {
+        "address": "1016 Peach Brook Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Newbury",
+        "description": "",
+        "email": "nocentsfarm@yahoo.com",
+        "id": 2483,
+        "keywords": "Turkey, eggs, rabbits, piglets, jams, pickled vegetables",
+        "lat": 44.066013,
+        "lon": -72.09272,
+        "name": "No Cents Farm",
+        "phone": "(802) 274-8732",
+        "products": "Turkey, eggs, rabbits, piglets, jams, pickled vegetables",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05051"
+    },
+    {
+        "address": "2124 N Hollow Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Rochester",
+        "description": "",
+        "email": "orders@vermontgrassfedbeef.com",
+        "id": 2511,
+        "keywords": "Beef, pork, eggs, maple syrup",
+        "lat": 43.907215,
+        "lon": -72.782318,
+        "name": "North Hollow Farm",
+        "phone": "8027674255",
+        "products": "Beef, pork, eggs, maple syrup",
+        "state": "VT",
+        "url": "http://vermontgrassfedbeef.weebly.com/",
+        "users": [],
+        "zip": "05767"
+    },
+    {
+        "address": "45 Old County Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Brattleboro",
+        "description": "",
+        "email": "",
+        "id": 2542,
+        "keywords": "Pork, chicken, duck, Cornis hens, muscovy ducks",
+        "lat": 42.738235,
+        "lon": -72.642807,
+        "name": "Not Your Ordinary Farm",
+        "phone": "8022517298",
+        "products": "Pork, chicken, duck, Cornis hens, muscovy ducks",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05301"
+    },
+    {
+        "address": "1250 VT Route 12",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Woodstock",
+        "description": "",
+        "email": "",
+        "id": 2577,
+        "keywords": "",
+        "lat": 43.6561683,
+        "lon": -72.5672214,
+        "name": "On the Edge Farm",
+        "phone": "8024574510",
+        "products": "Lamb, beef, pork, jam, pie",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05091"
+    },
+    {
+        "address": "444 Ski Tow Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Randolph",
+        "description": "",
+        "email": "clark@parmeleefarm.com",
+        "id": 2657,
+        "keywords": "Mobile chicken processor",
+        "lat": 43.933414,
+        "lon": -72.613243,
+        "name": "Parmelee Farm",
+        "phone": "(802) 249-3373",
+        "products": "Beef, pork, chicken, turkey",
+        "state": "VT",
+        "url": "http://www.parmeleefarm.com/index.html",
+        "users": [],
+        "zip": "05061"
+    },
+    {
+        "address": "1506 East Hill Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Andover",
+        "description": "",
+        "email": "pasturedmeats@vermontel.net",
+        "id": 2662,
+        "keywords": "",
+        "lat": 43.298469,
+        "lon": -72.695205,
+        "name": "Pastured Meats at East Hill Farm",
+        "phone": "(802) 875-1218",
+        "products": "Chicken, pork, lamb",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05143"
+    },
+    {
+        "address": "266 South Craftsbury Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Craftsbury",
+        "email": "pete@petesgreens.com",
+        "id": 2721,
+        "keywords": "Organic mixed vegetables, pastured pork, chicken, turkey",
+        "lat": 44.632992,
+        "lon": -72.37014,
+        "name": "Pete's Greens",
+        "phone": "8025862882",
+        "products": "Organic mixed vegetables, pastured pork, chicken, turkey",
+        "state": "VT",
+        "url": "http://www.petesgreens.com/",
+        "users": [],
+        "zip": "05841"
+    },
+    {
+        "address": "80 King Place",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Glover",
+        "description": "Our local, ethically raised meats are delicious, healthy, and free of antibiotics and hormones. We work hard to maintain the highest quality and care so that you get the best tasting products.",
+        "email": "ttownfarm@gmail.com",
+        "id": 3506,
+        "keywords": "Free Range Chicken, Duck, Guinea Hen, Turkey, Pasture Raised Pork, Grassfed Beef, Lamb, and Rabbit",
+        "lat": 44.7231513,
+        "lon": -72.2576805,
+        "name": "Tangletown Farm",
+        "phone": "8022294776",
+        "products": "Free range chicken, duck, Guinea hen, turkey, pasture raised pork, grassfed beef, lamb, and rabbit.",
+        "state": "VT",
+        "url": "http://www.tangletownfarm.com/",
+        "users": [],
+        "zip": "05875"
+    },
+    {
+        "address": "99 Rowell Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Walden",
+        "description": "",
+        "email": "",
+        "id": 3694,
+        "keywords": "Organic mixed vegetables, chicken, eggs, pork",
+        "lat": 44.449787,
+        "lon": -72.243996,
+        "name": "Two Acre Farm",
+        "phone": "(802) 563-3022",
+        "products": "Organic mixed vegetables, chicken, eggs, pork",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05873"
+    },
+    {
+        "address": "2175 East Street",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Bridport",
+        "description": "",
+        "email": "alethea@gmavt.net",
+        "id": 3827,
+        "keywords": "Pork, bacon, ham",
+        "lat": 44.021969,
+        "lon": -73.294365,
+        "name": "Vermont Heritage Grazers, LLC",
+        "phone": "8027585040",
+        "products": "Pork, bacon, ham",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05734"
+    },
+    {
+        "address": "511 Upper Dummerston Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Brattleboro",
+        "description": "We raise vegetables, beef, pork, chicken, turkey, lamb, raw milk, and use draft horses.",
+        "id": 4029,
+        "keywords": "Beef, chicken, turkey, pork, lamb, raw milk, and mixed vegetables",
+        "lat": 42.875322,
+        "lon": -72.583266,
+        "name": "Wild Carrot Farm",
+        "phone": "(802) 579-1261",
+        "products": "Beef, chicken, turkey, pork, lamb, raw milk, and mixed vegetables",
+        "state": "VT",
+        "url": "http://www.wildcarrotfarm.net/",
+        "users": [],
+        "zip": "05301"
+    },
+    {
+        "address": "40 Route 35",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Athens",
+        "description": "",
+        "email": "",
+        "id": 4033,
+        "keywords": "Grass-fed lamb, beef, pastured pork, mixed vegetables, garlic, melons",
+        "lat": 43.142162,
+        "lon": -72.563667,
+        "name": "Wild Shepherd Farm",
+        "phone": "(802) 344-0028",
+        "products": "Grass-fed lamb, beef, pastured pork, mixed vegetables, garlic, melons",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05143"
+    },
+    {
+        "address": "313 Hardscrabble Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Milton",
+        "description": "",
+        "email": "info@willowhillfarm.us",
+        "id": 4050,
+        "keywords": "Sheep and cow's milk cheese, organic blueberries, grass-fed lamb, whey-fed pork",
+        "lat": 44.6148115,
+        "lon": -73.0839876,
+        "name": "Willow Hill Farm",
+        "phone": "8028932963",
+        "products": "Sheep and cow's milk cheese, organic blueberries, grass-fed lamb, whey-fed pork",
+        "state": "VT",
+        "url": "http://www.sheepcheese.com/",
+        "users": [],
+        "zip": "05468"
+    },
+    {
+        "address": "1224 Laporte Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Morristown",
+        "description": "",
+        "email": "windingbf@comcast.net",
+        "id": 4064,
+        "keywords": "Chicken, turkey, pork, lamb, eggs, bacon, sausage",
+        "lat": 44.551777,
+        "lon": -72.615365,
+        "name": "Winding Brook Farm",
+        "phone": "8022793234",
+        "products": "Chicken, turkey, pork, lamb, eggs, bacon, sausage",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05661"
+    },
+    {
+        "address": "619 Tottingham Road",
+        "address2": "",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Shoreham",
+        "description": "",
+        "email": "sheep@shoreham.net",
+        "id": 4104,
+        "keywords": "Lamb, pork, eggs",
+        "lat": 43.898086,
+        "lon": -73.291441,
+        "name": "Works and Days Farm",
+        "phone": "8028972822",
+        "products": "Lamb, pork, eggs",
+        "state": "VT",
+        "url": "",
+        "users": [],
+        "zip": "05770"
+    },
+    {
+        "address": "814 Chazy Lake Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Saranac",
+        "email": "thefarmers@wovenmeadows.com",
+        "id": 3736,
+        "keywords": "Grass-fed beef, pastured poultry, eggs, pastured pork, cheese",
+        "lat": 44.674419,
+        "lon": -73.792975,
+        "name": "Woven Meadows Farm",
+        "phone": "8029336953",
+        "products": "Grass-fed beef, pastured poultry, eggs, pastured pork, cheese",
+        "state": "NY",
+        "url": "http://wovenmeadows.com/",
+        "users": [],
+        "zip": "12981"
+    },
+    {
+        "address": "22 Barber Farm Rd",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Jericho",
+        "description": "We are a Year Round CSA Farm.  We offer vegetables, meats and eggs from our farm in all seasons.  Our electrical needs are met by our solar panels.",
+        "email": "jsfarmvt@gmail.com",
+        "id": 4249,
+        "keywords": "CSA, vegetables, beef, pork, chicken, lamb, eggs, herbs, farmstand, greens, winter greens, solar powered, flowers, burlington farmers market",
+        "lat": 44.463343952532,
+        "lon": -72.979474067688,
+        "name": "Jericho Settlers Farm, Inc.",
+        "phone": "802.899.4000",
+        "products": "summer csa, fall csa, winter csa, spring csa, vegetables, farmstand, beef, pork, lamb, chicken, eggs, solar power, farmers market",
+        "state": "Vermont",
+        "url": "http://www.jerichosettlersfarm.com",
+        "users": [
+            {
+                "bio": "Vermont's Year Round CSA Farm!  Locally grown vegetables, meats and eggs from our farm in all seasons.  visit www.jerichosettlersfarm.com",
+                "email": "jsfarmvt@gmail.com",
+                "first_name": "Christa",
+                "last_name": "Alexander",
+                "phone": "8028994000"
+            }
+        ],
+        "zip": "05465"
+    },
+    {
+        "address": "51 Charles Avenue",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Middlebury",
+        "description": "Secondary and post secondary education and training in sustainable agriculture and food systems. Specific workforce training for Skilled Butchers and Meat Cutters offered state wide.",
+        "email": "lcoale@pahcc.org",
+        "id": 2666,
+        "keywords": "",
+        "lat": 44.005636,
+        "lon": -73.162331,
+        "name": "Patricia A. Hannaford Career Center",
+        "phone": "(802) 382-1012",
+        "products": "",
+        "state": "VT",
+        "url": "http://www.hannafordcareercenter.org/",
+        "users": [
+            {
+                "email": "jbosworth@pahcc.org",
+                "first_name": "Janice",
+                "last_name": "Bosworth",
+                "phone": "(802) 382-1006",
+                "title": "Agribusiness/Plant & Animal Instructor"
+            },
+            {
+                "bio": "I work with high school and adult students learning about and implementing sustainable food systems.",
+                "email": "lcoale@pahcc.org",
+                "first_name": "Lynn",
+                "last_name": "Coale",
+                "phone": "8023821002",
+                "title": "Director"
+            },
+            {
+                "email": "cwerner@pahcc.org",
+                "first_name": "Cheryl",
+                "last_name": "Werner",
+                "phone": "(802) 382-1013",
+                "title": "Sustainable Landscapes, Food Production & Turf Management Instructor"
+            }
+        ],
+        "zip": "05753"
+    },
+    {
+        "address": "2386 Shelburne Falls Rd.",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Hinesburg",
+        "description": "Family Cow Farmstand was the first state-certified raw milk dairy in Vermont. We milk a handful of grass-fed Guernsey cows. Our milk is tested regularly and is of extremely high quality. We do not ship any milk on the wholesale market. All the milk is bottled and sold directly from the farm. We also sell pastured pork and grass-fed beef.",
+        "email": "familycows@gmail.com",
+        "id": 4223,
+        "keywords": "raw milk, grass fed, pasture based, pork, beef, cheese making classes, micro-dairy",
+        "lat": 44.35605,
+        "lon": -73.155078,
+        "name": "Family Cow Farmstand",
+        "phone": "802-482-4440",
+        "products": "raw milk, pastured pork, grass fed beef",
+        "state": "Vermont",
+        "url": "http://www.familycowfarmstand.com",
+        "users": [
+            {
+                "bio": "Kalyn owns and operates Family Cow Farmstand. She provides very high quality, pasture-based milk to their community. They also sell 100% grass fed beef and pastured pork. \r\nwww.familycowfarmstand.com",
+                "email": "familycows@gmail.com",
+                "first_name": "Kalyn",
+                "last_name": "Campbell",
+                "phone": "8024824440",
+                "title": "Owner / Farmer"
+            }
+        ],
+        "zip": "05461"
+    },
+    {
+        "address": "2465 Gore Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Highgate",
+        "description": "We host Summer time farm tours to help educate our consumers about the benefits of creating relationships with local farmers.",
+        "email": "choinierefamilyfarm@gmail.com",
+        "id": 673,
+        "keywords": "\"dairy, milk, beef, veal, eggs, pork, organic, grass fed\"",
+        "lat": 44.9676125,
+        "lon": -73.0148802,
+        "name": "Choiniere Family Farm",
+        "phone": "8028682131",
+        "products": "Organic milk, veal, pork, beef, eggs",
+        "state": "VT",
+        "url": "https://sites.google.com/site/choinierefamilyfarm05459/",
+        "users": [
+            {
+                "bio": "We are a small farm tucked away in the small town of Highgate, Vermont near the Canadian border. We have been shipping certified organic milk to Organic Valley since 2005, and almost all of it is bought by Stonyfield Farm to put into their delicious yogurt. Our goal is to provide quality, nutritious food to our local community and provide education about buying local and staying healthy. Here at the Choiniere Family Farm, we strive to provide you with the healthiest food you can buy. Happy animals make the best produce, and our animals are happy! Our cows are outside every day, enjoying the fresh air. We raise grass fed beef, and our veal enjoy their mother's milk every day as a side to their pasture feast. Our free range chickens are outside every day, scratching up the lawn, driveway, and occasionally our flower garden, eating bugs, worms, and grass. Lastly our pigs enjoy gallons of fresh, creamy milk every day to wash down their grain, hay and veggies.",
+                "email": "choinierefamilyfarm@gmail.com",
+                "first_name": "Guy",
+                "last_name": "Choiniere",
+                "phone": "8028682131"
+            }
+        ],
+        "zip": "05459"
+    },
+    {
+        "address": "220 Clay Hill Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Hartland",
+        "description": "On a 95-acre conserved farm in Hartland, VT, Clay Hill Farm produces high quality grass-fed, corn-finished Vermont  Black Angus beef and pasture-raised heritage breed pork. Clay Hill Farm\u2019s all-natural meats are free of antibiotics, artificial hormones and GMOs. Meats are available frozen as quarters, halves and whole beef; half or whole pigs, and ground beef and steak value packages and can be ordered online. Ground beef and steaks can also be purchased at the farm by appointment.",
+        "email": "guy@clayhillfarmbeef.com",
+        "id": 710,
+        "keywords": "beef, pork, grass fed corn finished beef, heritage breed pork, GMO free meats, all natural beef, all natural pork",
+        "lat": 43.604324,
+        "lon": -72.381912,
+        "name": "Clay Hill Farm",
+        "phone": "802-291-1209",
+        "products": "beef, pork",
+        "state": "VT",
+        "url": "http://www.ClayHillFarmBeef.com",
+        "users": [
+            {
+                "bio": "Owner of Clay Hill Farm, Guy Crosby is a graduate of the University of New Hampshire and has been farming in Vermont since 1976. He raises Black Angus beef and heritage breed pork on his 95-acre conserved farm in Hartland, Vermont.",
+                "email": "guy@clayhillfarmbeef.com",
+                "first_name": "Guy",
+                "last_name": "Crosby",
+                "phone": "802-291-1209",
+                "title": "owner"
+            }
+        ],
+        "zip": "05048"
+    },
+    {
+        "address": "25 Fairbanks Rd",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "North Springfield",
+        "description": "Black River Meats aggregates and processes high quality, natural, red meats from Vermont and northern New England for foodservice and grocery markets.",
+        "email": "sbuchanan@blackriverproduce.com",
+        "id": 4259,
+        "lat": 43.331345,
+        "lon": -72.541335,
+        "name": "Black River Meats",
+        "phone": "1-800-228-5481",
+        "state": "Vermont",
+        "url": "http://www.blackrivermeats.com",
+        "users": [
+            {
+                "email": "Jean.myung.hamilton@gmail.com",
+                "first_name": "Jean",
+                "last_name": "Hamilton"
+            }
+        ],
+        "zip": "05150"
+    },
+    {
+        "address": "663 Doyle Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Washington",
+        "description": "We are a small, grass-based, organically managed family farm in Washington, Vermont producing high-quality, delicious, creamy raw milk that is not homogenized (i.e., the \"cream on top\" kind!) or pasteurized. We also sell a variety of other products including raw honey, grass-fed beef, and pastured pork.",
+        "email": "farmofmilkandhoney@gmail.com",
+        "id": 4558,
+        "keywords": "raw milk, raw honey, pastured pork, grass-fed beef",
+        "lat": 44.0441209,
+        "lon": -72.451714,
+        "name": "The Farm of Milk and Honey",
+        "phone": "802-685-3052",
+        "products": "raw milk, raw honey, pastured pork, grass-fed beef",
+        "state": "Vermont",
+        "url": "http://www.farmofmilkandhoney.com",
+        "users": [
+            {
+                "bio": "My family and I run a small, grass-based, organically managed family farm in Washington, Vermont producing high-quality, delicious, creamy raw milk that is not homogenized (i.e., the \"cream on top\" kind!) or pasteurized. We also sell a variety of other products including raw honey, grass-fed beef, and pastured pork.",
+                "email": "farmofmilkandhoney@gmail.com",
+                "first_name": "Ryan",
+                "last_name": "Hayes",
+                "phone": "802-685-3052",
+                "title": "Farm owner/manager"
+            }
+        ],
+        "zip": "05675"
+    },
+    {
+        "address": "2193 Hollister Hill Rd.",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Marshfield",
+        "description": "We had been dairy farmers shipping to Cabot Creamery of almost 20 years. Left the dairy business in 1997. In 2001 we opened a small retail farm store and have been offering naturally/organically raised meats/raw milk/maple syrup and fruits and vegetables ever since.",
+        "email": "hhfarmbb@aol.com",
+        "id": 4268,
+        "keywords": "beefalo beef, pork, poultry, raw milk, maple syrup, produce, farm B&B",
+        "lat": 44.308041,
+        "lon": -72.421997,
+        "name": "Hollister Hill Farm and B&B",
+        "phone": "802 454 7725",
+        "products": "educating people about small farm care of land and animals.",
+        "state": "Vermont",
+        "url": "http://hollisterhillfarm.com",
+        "users": [
+            {
+                "bio": "We moved to the Plainfield/Marshfield area in 1972 as back-to-the-landers. Our main interest at that time was to learn to produce healthy food for our family; we had no prior experience.  Through more than 40 years of homesteading and farming in Vermont, we\u2019ve learned an amazing amount about the care of animals, crops and the land and we are still learning.\r\nMost of our farming career centered on milking cows, especially Jerseys.  Even though we were predominately dairy farmers, we always made sure that we raised a few pigs, chickens, turkeys and ducks for ourselves and always had beef in our freezer.  We got out of the commercial dairy business in 1997. In 2001, we opened a small retail store where we sell our own naturally raised pork, beefalo, turkeys, chickens, and maple syrup. \r\nBut in 2009 we had the opportunity to expand our store, add organically grown vegetables and berries from Lee\u2019s garden, and milk a few Jersey cows. In addition to all of our other products, we now proudly and happily offer raw Jersey milk to our customers. Our farm has now come full circle and we are once again happily milking our beloved Jersey cows.",
+                "email": "hhfarmbb@aol.com",
+                "first_name": "Lee and Bob",
+                "last_name": "Light",
+                "phone": "802 454 7725",
+                "title": "co-owners"
+            }
+        ],
+        "zip": "05658"
+    },
+    {
+        "address": "229 Griffin Rd",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Waterville",
+        "description": "The Old Homestead Farm has been in the Thomas Family since 1887. Currently the farm is Operated by Krys and Heather Mateja with help from Heather\u2019s Parents Denny and Elaine Thomas, as well as our newest Farmers Waylon and Willoughby (Krys & Heather\u2019s young twins) who are the 7th Generation to farm this land.\r\n\r\nWe believe truly sustainable livestock farming requires the use of a pasture-based system. Pasture-raised animals roam freely in their natural environment where they're able to eat nutritious grasses and other plants that their bodies are adapted to digest. In addition to dramatically improving the welfare of farm animals, pasturing also helps reduce environmental damage, and yields meat, eggs, and dairy products that are tastier and more nutritious than foods produced on factory farms",
+        "email": "oldhomesteadfarmvt@gmail.com",
+        "id": 4265,
+        "keywords": "Organic Chicken, Black Angus Beef, Grass-fed, Pasture Raised, Icelandic Sheep, Lamb, Organic Pork, family Farm",
+        "lat": 44.687446,
+        "lon": -72.774,
+        "name": "Old Homestead Farm",
+        "phone": "8026448341",
+        "products": "Grass-fed Pasture raised Pure Angus Beef, Organically Raised chicken, Organic Pasture Raised Pork, Grass-fed Pasture Raised Icelandic Lamb",
+        "state": "Vermont",
+        "url": "http://www.oldhomesteadfarmvt.com/",
+        "users": [
+            {
+                "email": "oldhomesteadfarmvt@gmail.com",
+                "first_name": "Krys & Heather",
+                "last_name": "Mateja",
+                "phone": "8026448341",
+                "title": "Farmer"
+            }
+        ],
+        "zip": "05492"
+    },
+    {
+        "address": "712 Hannah rd",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Franklin",
+        "description": "Growing top quality fruits and vegetables. Raising free range chickens for meat and eggs. Loose housing all natural pork and Turkeys.",
+        "email": "hgmcallister@gmail.com",
+        "id": 4551,
+        "lat": 44.936676,
+        "lon": -72.976219,
+        "name": "McAllister Farms Llc",
+        "phone": "802-355-5476",
+        "state": "Vermont",
+        "users": [
+            {
+                "bio": "20 years of Dairy farming now focusing on fruits, vegetables, and meats.",
+                "email": "hgmcallister@gmail.com",
+                "first_name": "Heath",
+                "last_name": "McAllister",
+                "phone": "802-355-5476",
+                "title": "Partner"
+            }
+        ],
+        "zip": "05457"
+    },
+    {
+        "address": "PO Box 1141",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Shelburne",
+        "description": "The Food Systems Research Institute is committed to the cultivation of sustainable and just food systems by developing solutions, researching possibilities, and providing educational services. To achieve these goals, we provide the highest quality food system expertise and insight to clients that result in enduring change.\r\n\r\nThe Food System Research Institute\u2019s vision is to work towards sustainable food systems that afford all people\u2019s access not only to healthy and culturally appropriate food, but also the capability to engage in food production and agriculture through independent and ecologically sound methods. As a company, we are committed to improving the environment, increasing social well-being, and economic stability through services that are beneficial to all people\u2019s lives, regardless of race, class, gender, or geography.",
+        "email": "jmcentee@foodsri.com",
+        "id": 4216,
+        "lat": 44.3836193,
+        "lon": -73.2267062,
+        "name": "Food Systems Research Institute, LLC",
+        "state": "Vermont",
+        "url": "http://www.foodsystemsresearchinstitute.com/",
+        "users": [
+            {
+                "bio": "Jesse C. McEntee, Ph.D., is a Manager and Founder of the Food Systems Research Institute. Trained as an environmental social scientist working in the transdisciplinary settings of resource economics, land use, and regional planning, his food systems expertise draws from both private and public sectors. For instance, he supervised the intake of discovery materials for a litigation judgment of 1.6 billion dollars against Enron\u2019s energy transmission fraud in the Western US power market and has performed feasibility assessments of an international crop biofortification program for the Bill & Melinda Gates Foundation. He has owned his own consulting firm, worked for state government, and continues to teach at the university level. A prolific writer, he is the author of a number of internationally peer-reviewed publications, including articles and book chapters.",
+                "email": "jmcentee@foodsri.com",
+                "first_name": "Jesse",
+                "last_name": "McEntee",
+                "phone": "802-922-2078",
+                "title": "Managing Partner"
+            }
+        ],
+        "zip": "05482"
+    },
+    {
+        "address": "350 West Shore Rd.",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "South Hero",
+        "description": "We grow, aggregate and distribute more healthy, nutrient dense food.",
+        "email": "healthheroislandfarm@gmail.com",
+        "id": 4490,
+        "keywords": "beef, grass fed, pasture grazed, cattle, grazing, soil building, vegetables",
+        "lat": 44.645074,
+        "lon": -73.342784,
+        "name": "Health Hero Island Farm",
+        "phone": "802-378-5033",
+        "products": "Beef, vegetables, soil building consultation, tours, workshops",
+        "state": "Vermont",
+        "url": "http://www.healthheroislandfarm.com",
+        "users": [
+            {
+                "bio": "Eric No\u00ebl grew up on a conventional dairy farm in Highgate, Vermont. He returned to farming after a few years as a pit crew mechanic for the IndyCar series to transition the family farm in Vermont. Steering it from a conventional crop and dairy farm to a high performing operation, he gained recognition for his certified organic diversified, grass-fed beef and vegetable farm. Tuning into the infinite wisdom, drawing on proven techniques from around the world and stacking them together, he transformed the soil, forages and cattle in record time. The farm grew to serve hundreds of families the highest quality, most nutrient dense fresh food available.  \r\nEric is recognized by his colleagues as the top grazier in the Northeast. Eric draws from his training in Holistic Management and his eight years on the ground fine-tuning his techniques to help other farmers reach their full potential on their farms. \r\nEric is now the President of the Vermont Grass Farmers Association and is the Chair of the Northeast Pasture Consortium Stakeholder Action Committee. He has presented numerous times over the past four years around the Northeast at conference settings and on-site at farms. \r\nTo contact Eric and to find out how he can help the farmers in your organization, please email or call today. \r\nEmail ericrnoel@hotmail.com or call 802-752-8731.",
+                "email": "ericrnoel@hotmail.com",
+                "first_name": "Eric",
+                "last_name": "Noel",
+                "phone": "802-752-8731",
+                "title": "Co-owner"
+            }
+        ],
+        "zip": "05486"
+    },
+    {
+        "address": "337 Emch Dr.",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Fairfield",
+        "description": "We are young enterprising farmers working to strengthen the resiliency of the Vermont Agricultural landscape. We strive to use our farm to demonstrate proper animal husbandry, quality care for the land, and appreciation for the cycles of nature. We are constantly on a quest to produce the highest quality meat possible, and to further enhance the growing agrarian culture of Vermont.",
+        "email": "pigasuspork@gmail.com",
+        "id": 4554,
+        "keywords": "pork, pastured, rabbit, non-gmo, value added, farrowing, farmers market, organic, cooperative, pigasus, meats, stony pond,",
+        "lat": 44.8256269,
+        "lon": -72.8979142,
+        "name": "Pigasus Meats",
+        "products": "pork, cuts, rabbit, whole, half, piglets, growers, roasters",
+        "state": "Vermont",
+        "url": "https://www.facebook.com/pages/Pigasus-Meats/305941529550219",
+        "users": [
+            {
+                "bio": "We are a beginning Pastured Pork and Rabbit Operation. We are located in Fairfield, VT and strive to produce the highest quality pork and rabbit meats on the market. We work in conjunction with Stony Pond Farm, a grass based dairy and grass finished beef operation.",
+                "email": "pigasuspork@gmail.com",
+                "first_name": "Phelan",
+                "last_name": "O'Connor",
+                "title": "Co-Owner/Operator"
+            }
+        ],
+        "zip": "05455"
+    },
+    {
+        "address": "Gilbert rd",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Barre",
+        "description": "Activist, sustainable food producer",
+        "email": "terrosafarm@gmail.com",
+        "id": 4555,
+        "lat": 42.4547357,
+        "lon": -72.0776552,
+        "name": "Terrosafarm",
+        "phone": "508 259 4427",
+        "state": "Massachusetts",
+        "url": "http://www.terrosafarm.com",
+        "users": [
+            {
+                "bio": "Farmer",
+                "email": "terrosafarm@gmail.com",
+                "first_name": "Karen",
+                "last_name": "Pettinelli",
+                "phone": "508 259 4427",
+                "title": "Owner"
+            }
+        ],
+        "zip": "01005"
+    },
+    {
+        "address": "895 Salvas Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Huntington",
+        "description": "Stark Hollow Farm raises heritage and primitive breeds of livestock, ensure the continuance of these beautiful and unique animals. We offer 100% grass fed Icelandic lamb and forest raised Tamworth pork. We will be offering a line of specialty artisan meat products following ancient Italian curing and processing methods within the next year.",
+        "email": "farmer@startkhollowfarm.com",
+        "id": 4234,
+        "keywords": "lcelandic sheep for sale, vermont, grass fed, lamb, pork, tamworth, pigs,",
+        "lat": 44.307395,
+        "lon": -72.937787,
+        "name": "Stark Hollow Farm",
+        "phone": "802-434-3953",
+        "products": "registered Icelandic breed stock, registered Tamworth breed stock, pork, lamb",
+        "state": "Vermont",
+        "url": "http://www.starkhollowfarm.com",
+        "users": [
+            {
+                "bio": "Our mission is to create and manage a small farm in sync with nature, producing healthy, sustainable farm products from animals whose quality of life is our passion. Stark Hollow Farm sells purebred, registered Icelandic sheep and Tamworth pigs from our hillside farm in Vermont. We place an emphasis on the conservation aspects of raising heritage and primitive breed animals and focus on animal welfare rather than high production.\r\n \r\nIn addition to our registered Icelandic sheep and heritage breed pigs, we also produce forage based meat rabbits & heritage breed layer hens. We focus on land use optimization through rotational grazing, promoting symbiotic livestock relationships, and employing methods of sustainable building and resource development to support our mission.",
+                "email": "farmer@starkhollowfarm.com",
+                "first_name": "Vanessa",
+                "last_name": "Riva",
+                "phone": "802-434-3953",
+                "title": "Owner"
+            }
+        ],
+        "zip": "05462"
+    },
+    {
+        "address": "23 Stone Road",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "South Ryegate",
+        "description": "myfarmersmkt.com allows farmers and local home based businesses sell their products online. With our advance search function, enter your zip code and only local farms are listed, so users always buy local. Using Bid To Grow, local restaurants, schools and institutions list their food needs as contracts, and farmers bid to fill the contract. We also have a Farmers Forum the creates a place for members to blog, share information or resources.",
+        "email": "admin@myfarmersmkt.com",
+        "id": 4565,
+        "keywords": "Farmer Owned and Operated",
+        "lat": 44.18995,
+        "lon": -72.1430029,
+        "name": "myfarmersmkt.com",
+        "phone": "802-584-4067",
+        "products": "Farmers Market Promotion, Bid To Grow Farm to Consumer",
+        "state": "Vermont",
+        "url": "http://www.myfarmersmkt.com",
+        "users": [
+            {
+                "bio": "Web Designer and Site Administrator",
+                "email": "admin@myfarmersmkt.com",
+                "first_name": "Dan",
+                "last_name": "Robinson",
+                "phone": "802-584-4202",
+                "title": "Site Admin"
+            }
+        ],
+        "zip": "05069"
+    },
+    {
+        "address": "22 benedict crossing",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "arlington",
+        "description": "Our farm produces a 60 share CSA program.",
+        "id": 4556,
+        "lat": 43.091362379102,
+        "lon": -73.198943138123,
+        "name": "Pickerings Greenhouse",
+        "state": "Vermont",
+        "users": [
+            {
+                "email": "amandapickeringtaft@yahoo.com",
+                "first_name": "Amanda",
+                "last_name": "Taft"
+            }
+        ],
+        "zip": "05250"
+    },
+    {
+        "address": "102 route 7b south",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "north clarendon",
+        "description": "Pine Hollow Farm is privileged to be a part of the local food movement by providing pastured chicken, turkey and pigs for our neighbors to enjoy. We never add hormones or antibiotics.",
+        "email": "pinehollowvt@gmail.com",
+        "id": 4506,
+        "keywords": "pork, turkey, chicken",
+        "lat": 43.4968687,
+        "lon": -72.9717393,
+        "name": "Pine Hollow Farm",
+        "phone": "802 446 2243",
+        "products": "chicken, turkey, pork",
+        "state": "Vermont",
+        "url": "http://www.pinehollowfarmvt.com",
+        "users": [
+            {
+                "bio": "After years of raising meat for our own consumption, in 2010 we began to offer our meat at the Farm and at local farmers markets. Our chicken, turkey and pork is raised on pasture and without hormones or antibiotics. They are happy birds and pigs for healthy people.",
+                "email": "pinehollowvt@gmail.com",
+                "first_name": "robin",
+                "last_name": "taft",
+                "phone": "802 446 2243",
+                "title": "ceo"
+            }
+        ],
+        "zip": "05759"
+    },
+    {
+        "address": "2581 South Rd",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Bradford",
+        "description": "We raise pastured chicken and pork and raise vegetables naturally to provide the best food possible for our surrounding communities.",
+        "email": "HoneyLocustFarmVT@gmail.com",
+        "id": 4543,
+        "keywords": "CSA, natural, vegetable, pork, chicken, turkey, GMO-free",
+        "lat": 43.988815,
+        "lon": -72.191505,
+        "name": "Honey Locust Farm",
+        "phone": "802-222-1586",
+        "products": "Vegetables, pork, chicken, turkey",
+        "state": "Vermont",
+        "url": "http://www.HoneyLocustFarmVt.com",
+        "users": [
+            {
+                "email": "HoneyLocustFarmVT@gmail.com",
+                "first_name": "Jake",
+                "last_name": "Torrey",
+                "phone": "802-222-1586"
+            }
+        ],
+        "zip": "05033"
+    },
+    {
+        "address": "91 Clark Street",
+        "categories": [
+            {
+                "id": 179,
+                "name": "Pork"
+            }
+        ],
+        "city": "Westminster",
+        "description": "We have a small family farm located in North Westminster, about two miles from Bellows Falls. We currently raise goats for dairy, chickens and ducks for eggs and meat, as well as pigs. We offer fresh milk, meat, chicken, canned goods, goat milk caramel sauces, desserts, prepared foods, and more. We currently sell prepared meals at area farmers markets made from our farm fresh selection of goods. We offer catering services for private events (please talk to us for further details and menu). \r\nWe have a small herd of ADGA registered Alpine dairy goats. Kids are available for sale in the spring. We are in the process of opening a VT state inspected cheeseroom. Fresh goat's milk is available for on-farm pick-up March through December (please call ahead to arrange a time). We are always happy to show off our farm - give us a call!",
+        "email": "andyware@comcast.net",
+        "id": 4534,
+        "keywords": "dairy, goat, caramel, chicken, pork, catering",
+        "lat": 43.123276,
+        "lon": -72.459915,
+        "name": "AlpineGlo Farm LLC",
+        "phone": "802-463-2018",
+        "products": "raw goats milk, caramel, cajeta, pork, chicken",
+        "state": "Vermont",
+        "url": "http://www.vthorseshoer.com",
+        "users": [
+            {
+                "bio": "Rachel Ware is owner of AlpineGlo Farm in Westminster, VT.  She is also the current manager for the Bellows Falls Farmers Market.  She has a strong commitment to the local food system and raising awareness about healthy, self-sufficient lifestyles.  She earned her B.S. in Animal Science and has worked in agriculture and healthcare for the past 14 years.  AlpineGlo Farm offers fresh goats milk, meat, chicken, canned goods, goat milk caramel sauces, desserts, prepared foods, and more. She currently sells healthy meals prepared with ingredients raised on her farm at several area farmers markets.  She is always happy to share her love of cooking, animals, and farming with others.",
+                "email": "andyware@comcast.net",
+                "first_name": "Rachel",
+                "last_name": "Ware",
+                "phone": "802-463-2018",
+                "title": "Owner/Operator"
+            }
+        ],
+        "zip": "05158"
+    }
+]
