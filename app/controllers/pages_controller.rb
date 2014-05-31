@@ -3,6 +3,11 @@ class PagesController < ApplicationController
     end
 
     def type_post
+        zip = params[:zip]
+        if zip
+          session[:location] = zip.to_latlon.split(",").map(&:to_f)
+        end
+
         redirect_to "/opened"
     end
 
