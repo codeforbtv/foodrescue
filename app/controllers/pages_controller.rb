@@ -12,10 +12,10 @@ class PagesController < ApplicationController
         session[:survey_response] = survey_response.to_json
 
         # TODO: Check if NOT human consumable, redirect to results
-        if survey_response.is_prepared_or_processed:
+        if survey_response["is_prepared_or_processed"]
             redirect_to "/opened"
         else
-            redirect_to "/opened"
+            redirect_to "/results"
         end
     end
 

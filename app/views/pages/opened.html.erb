@@ -1,5 +1,6 @@
 <h1>Opened</h1>
 
+<%= @survey_response["is_prepared_or_processed"] ? "Yup" : "Nope" %>
 <%= form_tag do %>
   <input type="submit" />
 <% end %>
