@@ -4,17 +4,17 @@ class PagesController < ApplicationController
 
     def type_post
         survey_response = {
-		"is_prepared_or_processed" => request.POST['answer'].to_i == 1 ? true : false
+		"is_prepared" => request.POST['answer'].to_i == 1 ? true : false
 	}
 
         # Save to session
         session[:survey_response] = survey_response.to_json
 
         # If not human consumable, redirect to results
-        if not survey_response["is_prepared_or_processed"]
-            redirect_to "/results"
-        else
+        if survey_response["is_prepared"]
             redirect_to "/opened"
+        else
+            redirect_to "/distress"
         end
     end
 
@@ -40,20 +40,48 @@ class PagesController < ApplicationController
     end
 
     def danger_zone_post
-        redirect_to "/age"
+	survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_dangerous"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # If not human consumable, redirect to results
+        if survey_response["is_dangerous"]
+            redirect_to "/results"
+        else
+            redirect_to "/age"
+        end
     end
 
     def age
     end
 
     def age_post
-        redirect_to "/distress"
+	survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_too_old"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # If not human consumable, redirect to results
+        if survey_response["is_too_old"]
+            redirect_to "/results"
+        else
+            redirect_to "/distress"
+        end
     end
 
     def distress
     end
 
     def distress_post
+	survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_distressed"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
         redirect_to "/results"
     end
 

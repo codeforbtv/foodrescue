@@ -1,5 +1,7 @@
 <h1>Results</h1>
 
+<%= session["survey_response"].to_json %>
+
 <% @results.each do |result| %>
 
     <h2><%= result['name'] %></h2>
