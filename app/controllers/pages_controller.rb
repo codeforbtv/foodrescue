@@ -8,8 +8,7 @@ class PagesController < ApplicationController
             "is_prepared" => params[:answer].to_i == 1 ? true : false
         }
 
-        # Save to session
-        session[:survey_response] = survey_response.to_json
+        save_survey_response(survey_response)
 
         # If not human consumable, redirect to results
         if survey_response["is_prepared"]
@@ -23,11 +22,10 @@ class PagesController < ApplicationController
     end
 
     def opened_post
-        survey_response = JSON.parse( session["survey_response"] )
+        survey_response = load_survey_response
         survey_response["is_opened"] = request.POST['answer'].to_i == 1 ? true : false
 
-        # Save to session
-        session[:survey_response] = survey_response.to_json
+        save_survey_response(survey_response)
 
         # If not human consumable, redirect to results
         if survey_response["is_opened"]
@@ -41,11 +39,10 @@ class PagesController < ApplicationController
     end
 
     def danger_zone_post
-        survey_response = JSON.parse( session["survey_response"] )
+        survey_response = load_survey_response
         survey_response["is_dangerous"] = request.POST['answer'].to_i == 1 ? true : false
 
-        # Save to session
-        session[:survey_response] = survey_response.to_json
+        save_survey_response(survey_response)
 
         # If not human consumable, redirect to results
         if survey_response["is_dangerous"]
@@ -59,11 +56,10 @@ class PagesController < ApplicationController
     end
 
     def age_post
-        survey_response = JSON.parse( session["survey_response"] )
+        survey_response = load_survey_response
         survey_response["is_too_old"] = request.POST['answer'].to_i == 1 ? true : false
 
-        # Save to session
-        session[:survey_response] = survey_response.to_json
+        save_survey_response(survey_response)
 
         # If not human consumable, redirect to results
         if survey_response["is_too_old"]
@@ -77,11 +73,10 @@ class PagesController < ApplicationController
     end
 
     def distress_post
-        survey_response = JSON.parse( session["survey_response"] )
+        survey_response = load_survey_response
         survey_response["is_distressed"] = request.POST['answer'].to_i == 1 ? true : false
 
-        # Save to session
-        session[:survey_response] = survey_response.to_json
+        save_survey_response(survey_response)
 
         redirect_to "/results"
     end
@@ -90,4 +85,14 @@ class PagesController < ApplicationController
       @current_location = {latitude:  44.49, longitude: -73.22}
       @results = Org.all.sort_by {|org| org.distance_from(@current_location) }
     end
+
+    private
+
+        def load_survey_response
+            JSON.parse( session["survey_response"] )
+        end
+
+        def save_survey_response(survey_response)
+            session[:survey_response] = survey_response.to_json
+        end
 end
