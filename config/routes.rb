@@ -5,6 +5,22 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 root 'pages#home'
 
+post 'type' => 'pages#type_post'
+
+get 'opened' => 'pages#opened'
+post 'opened' => 'pages#opened_post'
+
+get 'danger-zone' => 'pages#danger_zone'
+post 'danger-zone' => 'pages#danger_zone_post'
+
+get 'age' => 'pages#age'
+post 'age' => 'pages#age_post'
+
+get 'distress' => 'pages#distress'
+post 'distress' => 'pages#distress_post'
+
+get 'results' => 'pages#results'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
