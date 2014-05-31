@@ -35,6 +35,6 @@ class PagesController < ApplicationController
     end
 
     def results
+      @results = Org.all
     end
 end
-
