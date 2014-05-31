@@ -1,0 +1,72 @@
+/* Imports */
+@import url('normalize.css');
+@import url('main.css');
+
+/* Base Theme CSS */
+* {
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, header, footer {
+	background-color: #bb5533;
+}
+main {
+	background-color: #ffffff;
+}
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+}
+header, footer {
+	color: #ffffff;
+}
+header {
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: bold;
+}
+
+/* Forms */
+label {
+	font-weight: bold;
+	display: block;
+}
+input, textarea {
+	padding: 3px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+input#zip {
+	width: 100px;
+}
+.form-group {
+	margin-bottom: 15px;
+}
+fieldset.options {
+	width: 100%;
+}
+fieldset.options > .option {
+	float: left;
+	width: 48%;
+}
+fieldset.options > .option-1 {
+	margin-right: 4%;
+}
+fieldset.options button {
+	margin: 20px 0;
+	width: 100%;
+	min-height: 50px;
+	border-radius: 10px;
+	border: 1px solid grey;
+	background-color: #999955;
+	color: #ffffff;
+	font-weight: bold;
+}
+fieldset.options .example {
+	border: 1px solid darkgrey;
+	background-color: #ffdd11;
+}

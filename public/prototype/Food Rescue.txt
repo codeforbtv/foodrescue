@@ -1,0 +1,47 @@
+Food Rescue:
+
+6 Pages
+1 - Main page:
+	Short intro, ask for zipcode, then CTA to start survey
+2 - Survey Page 1
+3 - etc
+
+
+Survey
+- Start with zipcode (right away. Also not necessarily part of the survey)
+- Describe food (what is it?) Free text w/ auto complete maybe?
+- Series of pages, 2 options per, branch from there (include relevant examples on pages)
+- Each page of survey is a binary choice
+
+Questions:
+- Type of food (processed, canned, cooked)
+- Has it been opened?
+- Temperature (danger zones?)
+- How old is it?
+- How yucky is the food? (moldly? is it human consumable?)
+
+End result:
+1 - Animals/Compost
+2 - Recommend Nearby Food shelf
+
+if human-consumable, show local food shelves first, then show compost/farms/etc
+
+If not human-consumable, show recommendations for future food drops
+
+Any purely informational pages?
+
+- No red/green colors (especially on survey page)
+- Think of some UI colors (yellow? it's relatively neutral)
+
+Bootstrap (buttons can be made to include large amounts of text with a couple simple CSS overrides)
+Sass
+
+
+
+Views
+	1st Page (intro text, zipcode, question, binary answer CTAs)
+	Survey Page (question, binary choice CTAs)
+	Results Page (Human-Consumption result list (food shelters/banks), animal consumption/commercial compost centers, suggestions for other methods (compost it yourself!))
+
+Extra stuff:
+- Add support for custom messages (bootstrap alerts)
