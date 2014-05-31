@@ -2,6 +2,10 @@
 
 <% @results.each do |result| %>
 
-    <h2><%= result['name'] %></h2>
+    <li>
+      <%= result['name'] %>
+        -
+      <%= result.distance_from(@current_location) %>
+    </li>
 
 <% end %>

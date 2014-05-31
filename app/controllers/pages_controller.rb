@@ -35,6 +35,7 @@ class PagesController < ApplicationController
     end
 
     def results
-      @results = Org.all
+      @current_location = {latitude:  44.49, longitude: -73.22}
+      @results = Org.all.sort_by {|org| org.distance_from(@current_location) }
     end
 end
