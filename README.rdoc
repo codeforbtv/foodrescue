@@ -1,0 +1,6 @@
+Hi, We are FoodRescue
+
+This is on an MIT license
+
+This application helps people with surplus food determine how to dispose of it in accordance
+with Act 148 (Vermont's Universal Recycling Law).
