@@ -3,39 +3,86 @@ class PagesController < ApplicationController
     end
 
     def type_post
-        zip = params[:zip]
-        if zip
-          session[:location] = zip.to_latlon.split(",").map(&:to_f)
-        end
+        survey_response = {
+            "zip_code" => params[:zip] ? params[:zip].to_latlon.split(",").map(&:to_f) : nil,
+            "is_prepared" => params[:answer].to_i == 1 ? true : false
+        }
 
-        redirect_to "/opened"
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # If not human consumable, redirect to results
+        if survey_response["is_prepared"]
+            redirect_to "/opened"
+        else
+            redirect_to "/distress"
+        end
     end
 
     def opened
     end
 
     def opened_post
-        redirect_to "/danger-zone"
+        survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_opened"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # If not human consumable, redirect to results
+        if survey_response["is_opened"]
+            redirect_to "/results"
+        else
+            redirect_to "/danger-zone"
+        end
     end
 
     def danger_zone
     end
 
     def danger_zone_post
-        redirect_to "/age"
+        survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_dangerous"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # If not human consumable, redirect to results
+        if survey_response["is_dangerous"]
+            redirect_to "/results"
+        else
+            redirect_to "/age"
+        end
     end
 
     def age
     end
 
     def age_post
-        redirect_to "/distress"
+        survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_too_old"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
+        # If not human consumable, redirect to results
+        if survey_response["is_too_old"]
+            redirect_to "/results"
+        else
+            redirect_to "/distress"
+        end
     end
 
     def distress
     end
 
     def distress_post
+        survey_response = JSON.parse( session["survey_response"] )
+        survey_response["is_distressed"] = request.POST['answer'].to_i == 1 ? true : false
+
+        # Save to session
+        session[:survey_response] = survey_response.to_json
+
         redirect_to "/results"
     end
 

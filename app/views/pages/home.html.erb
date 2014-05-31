@@ -1,7 +1,10 @@
 <h1>Home</h1>
 
+Is it prepared?
+
 <%= form_tag action: "type_post" do %>
     Zip: <input name="zip" value="05401">
     <br>
-  <input type="submit" />
+    <button type="submit" value="1" name="answer">Yes</button>
+    <button type="submit" value="0" name="answer">No</button>
 <% end %>
