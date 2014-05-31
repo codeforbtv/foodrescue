@@ -88,10 +88,12 @@ class PagesController < ApplicationController
 
     private
 
+        # TODO: Move to SurveyResponse model
         def load_survey_response
             JSON.parse( session["survey_response"] )
         end
 
+        # TODO: Move to SurveyResponse model
         def save_survey_response(survey_response)
             session[:survey_response] = survey_response.to_json
         end
