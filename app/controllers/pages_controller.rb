@@ -107,22 +107,22 @@ class PagesController < ApplicationController
 
   private
 
-  def set_current_location
-    @current_location ||= session[:location] || BURLINGTON
-  end
-
-  def set_location_from_zip zip
-    location_hash = Zips.find(zip)
-    if location_hash
-      @current_location = session[:location] = location_hash
-    else
-      false
+    def set_current_location
+      @current_location ||= session[:location] || BURLINGTON
     end
-  end
 
-  def load_survey_response
-    uuid = session[:survey_response_uuid]
-    @survey_response = SurveyResponse.find_by(uuid: session[:survey_response_uuid])
-  end
+    def set_location_from_zip zip
+      location_hash = Zips.find(zip)
+      if location_hash
+        @current_location = session[:location] = location_hash
+      else
+        false
+      end
+    end
+
+    def load_survey_response
+      uuid = session[:survey_response_uuid]
+      @survey_response = SurveyResponse.find_by(uuid: session[:survey_response_uuid])
+    end
 
 end
