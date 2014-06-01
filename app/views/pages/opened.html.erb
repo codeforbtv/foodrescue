@@ -1,4 +1,9 @@
 <%= form_tag({ controller: "pages", action: "opened_post" }, class: "page-two") do %>
+
+    <div class="conversation">
+      Nice! Tell us more about your <%= @survey_response.food_description %>.
+    </div>
+
     <h2>Has it been opened?</h2>
     <fieldset class="options">
         <div class="option option-1">

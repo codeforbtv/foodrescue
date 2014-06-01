@@ -15,9 +15,12 @@
 
   <header>
       <div class="container">
-          <div class="logo"><%= link_to_unless_current("FoodRescue Vermont", root_path) %></li>
+          <div class="logo">
+            <%= link_to_unless_current("FoodRescue Vermont", root_path) %>
+          </div>
       </div>
   </header>
+
   <main class="content">
       <div class="container">
         <%= yield %>

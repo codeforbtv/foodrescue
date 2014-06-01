@@ -1,4 +1,8 @@
 <%= form_tag({ controller: "pages", action: "age_post" }, class: "page-four") do %>
+    <div class="conversation">
+      Yum! Let's hear some more about the <%= @survey_response.food_description %>.
+    </div>
+
     <h2>How old is your food?</h2>
     <fieldset class="options">
         <div class="option option-1">
