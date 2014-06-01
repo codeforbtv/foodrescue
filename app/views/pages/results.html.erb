@@ -2,11 +2,27 @@
 
 <%= @survey_response.to_json %>
 
-<% @results.each do |result| %>
-
+<h3>Food Shelves</h3>
+<% @foodshelf.each do |result| %>
     <li>
       <%= result['name'] %>
       (<%= result.distance_from(@current_location) %> mi)
     </li>
+<% end %>
 
+<h3>Pig Farms</h3>
+
+<% @pig.each do |result| %>
+    <li>
+      <%= result['name'] %>
+      (<%= result.distance_from(@current_location) %> mi)
+    </li>
+<% end %>
+
+<h3>Composting Facilities</h3>
+<% @compost.each do |result| %>
+    <li>
+      <%= result['name'] %>
+      (<%= result.distance_from(@current_location) %> mi)
+    </li>
 <% end %>
