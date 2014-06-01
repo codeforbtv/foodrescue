@@ -115,9 +115,10 @@ class PagesController < ApplicationController
     @survey_response.completed = true
     @survey_response.save!
 
-    @foodshelf = Org.from_file( "foodshelf" ).delete_if {|org| org.distance_from( @current_location ) >= 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
-    @pig = Org.from_file( "pig" ).delete_if {|org| org.distance_from( @current_location ) >= 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
-    @compost = Org.from_file( "compost" ).delete_if {|org| org.distance_from( @current_location ) >= 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    # Grabs the top three results within 20 miles, sorted by distance
+    @foodshelf = Org.from_file( "foodshelf" ).delete_if {|org| org.distance_from( @current_location ) > 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @pig = Org.from_file( "pig" ).delete_if {|org| org.distance_from( @current_location ) > 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @compost = Org.from_file( "compost" ).delete_if {|org| org.distance_from( @current_location ) > 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
   end
 
   private
