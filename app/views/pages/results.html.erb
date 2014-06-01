@@ -1,7 +1,5 @@
 <h1>Results</h1>
 
-<%= @survey_response.to_json %>
-
 <h3>Food Shelves</h3>
 <% @foodshelf.each do |result| %>
     <li>
@@ -11,7 +9,6 @@
 <% end %>
 
 <h3>Pig Farms</h3>
-
 <% @pig.each do |result| %>
     <li>
       <%= result['name'] %>
