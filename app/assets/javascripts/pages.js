@@ -11,6 +11,7 @@ frv.util = {
 	conf: {
 	},
 	sel: {
+		input: 'input'
 	},
 	init: function() {
 		var _this = this;
@@ -19,7 +20,7 @@ frv.util = {
 	},
 	formEnterDisable: function() {
 		//handle enter key
-		$("input").keypress(function (e) {
+		$(this.sel.input).keypress(function (e) {
 		    var k = e.keyCode || e.which;
 		    if (k == 13) {
 		        return false; // !!!
