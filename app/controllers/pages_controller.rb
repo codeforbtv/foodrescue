@@ -8,7 +8,8 @@ class PagesController < ApplicationController
         survey_response = load_survey_response
 
         survey_response.merge!({
-            "zip_code" => params[:zip] ? params[:zip].to_latlon.split(",").map(&:to_f) : nil,
+            "zip_code" => params[:zip] ? params[:zip] : nil,
+            "location" => params[:zip] ? params[:zip].to_latlon.split(",").map(&:to_f) : nil,
             "food_description" => params[:food_description] ? params[:food_description] : nil,
             "is_prepared" => params[:answer].to_i == 1 ? true : false
         })
@@ -120,6 +121,7 @@ class PagesController < ApplicationController
             return {
                 "id" => SecureRandom.uuid,
                 "zip_code" => nil,
+                "location" => nil,
                 "food_description" => nil,
                 "is_prepared" => nil,
                 "is_opened" => nil,
