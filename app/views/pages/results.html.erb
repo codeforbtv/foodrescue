@@ -14,7 +14,7 @@
 	      <% end %>
               <% if result['email'] and result['email'].length > 1 %>
 	          <br />
-                  email: <%= result['email'] %>
+                 <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
 	      <% end %>
 	    </li>
 	<% end %>
@@ -35,7 +35,7 @@
              <% end %>
              <% if result['email'] and result['email'].length > 1 %>
                  <br />
-                 email: <%= result['email'] %>
+                 <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
              <% end %>
     </li>
 <% end %>
@@ -53,7 +53,7 @@
              <% end %>
              <% if result['email'] and result['email'].length > 1 %>
                  <br />
-                 email: <%= result['email'] %>
+                 <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
              <% end %>
     </li>
 <% end %>

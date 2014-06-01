@@ -28,6 +28,9 @@ class PagesController < ApplicationController
     if not params[:food_description].present? or params[:food_description].empty?
       errors.push "Please provide a description of the food."
     end
+    if not params[:answer].present?
+      errors.push "Please tell us whether your food was prepared or not."
+    end
 
     if errors.length != 0
       # todo: preserve entered values of zip and description    
@@ -109,9 +112,9 @@ class PagesController < ApplicationController
   end
 
   def results
-    @foodshelf = Org.from_file( "foodshelf", 3 ).sort_by {|org| org.distance_from( @current_location ) }
-    @pig = Org.from_file( "pig", 3 ).sort_by {|org| org.distance_from( @current_location ) }
-    @compost = Org.from_file( "compost", 3 ).sort_by {|org| org.distance_from( @current_location ) }
+    @foodshelf = Org.from_file( "foodshelf" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @pig = Org.from_file( "pig" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @compost = Org.from_file( "compost" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
   end
 
   private
