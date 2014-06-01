@@ -6,7 +6,7 @@
 <% @foodshelf.each do |result| %>
     <li>
       <%= result['name'] %>
-      (<%= result.distance_from(@current_location) %> mi)
+      (<%= result.distance_from(@current_location).round %> mi)
     </li>
 <% end %>
 
@@ -15,7 +15,7 @@
 <% @pig.each do |result| %>
     <li>
       <%= result['name'] %>
-      (<%= result.distance_from(@current_location) %> mi)
+      (<%= result.distance_from(@current_location).round %> mi)
     </li>
 <% end %>
 
@@ -23,6 +23,6 @@
 <% @compost.each do |result| %>
     <li>
       <%= result['name'] %>
-      (<%= result.distance_from(@current_location) %> mi)
+      (<%= result.distance_from(@current_location).round %> mi)
     </li>
 <% end %>
