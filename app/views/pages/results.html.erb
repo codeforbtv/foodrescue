@@ -8,7 +8,7 @@
     <h3><i></i>Food Shelves</h3>
     <% if @survey_response.edible? %>
         <% @foodshelf.each do |result| %>
-          <%= render 'result', result: result %>
+          <%= render 'result', result: result, org_type: 'food' %>
         <% end %>
     <% else %>
         <li>This food is not elligible to donate to a food shelf. Please see the other resources below</li>
@@ -18,14 +18,14 @@
   <section class="farms">
     <h3><i></i>Pig Farms</h3>
     <% @pig.each do |result| %>
-      <%= render 'result', result: result %>
+      <%= render 'result', result: result, org_type: 'pig' %>
     <% end %>
   </section>
 
   <section class="compost">
     <h3><i></i>Composting Facilities</h3>
     <% @compost.each do |result| %>
-      <%= render 'result', result: result %>
+      <%= render 'result', result: result, org_type: 'compost' %>
     <% end %>
   </section>
 </div>
