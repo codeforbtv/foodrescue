@@ -100,9 +100,9 @@ class PagesController < ApplicationController
   end
 
   def results
-    @foodshelf = Org.from_file( "foodshelf", 3 ).sort_by {|org| org.distance_from( @current_location ) }
-    @pig = Org.from_file( "pig", 3 ).sort_by {|org| org.distance_from( @current_location ) }
-    @compost = Org.from_file( "compost", 3 ).sort_by {|org| org.distance_from( @current_location ) }
+    @foodshelf = Org.from_file( "foodshelf" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @pig = Org.from_file( "pig" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @compost = Org.from_file( "compost" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
   end
 
   private
