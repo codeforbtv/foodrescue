@@ -1,11 +1,15 @@
 <h1>Results</h1>
 
 <h3>Food Shelves</h3>
-<% @foodshelf.each do |result| %>
-    <li>
-      <%= result['name'] %>
-      (<%= result.distance_from(@current_location).round %> mi)
-    </li>
+<% if @survey_response.edible? =%>
+	<% @foodshelf.each do |result| %>
+	    <li>
+	      <%= result['name'] %>
+	      (<%= result.distance_from(@current_location).round %> mi)
+	    </li>
+	<% end %>
+<% else %>
+	<li>This food is not elligible to donate to a food shelf. Please see the other resources below</li>
 <% end %>
 
 <h3>Pig Farms</h3>
