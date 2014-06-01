@@ -13,7 +13,7 @@ $grey: grey;
 $orange: #4d81a2;
 $orangeLight: #d48f79;
 $greenDark: #7d7d39;
-$green: #F8F8F8;
+$green: #b1d5aa;
 $greenLight: #F8F8F8;
 
 /* Headings */
@@ -36,7 +36,7 @@ header {
 }
 
 footer {
-	border-top: 2px solid $orangeLight;
+
 }
 main {
 	background-color: $white;
@@ -113,8 +113,7 @@ fieldset {
 		}
 		.example {
 			border: 1px solid $grey;
-			background-color: #ffdd11;
-			border-radius: 0 0 6px 6px;
+			background-color: #b7c6cc;
 		}
 	}
 }
