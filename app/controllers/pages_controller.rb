@@ -36,12 +36,12 @@ class PagesController < ApplicationController
     end
 
     # Create the new survey response
-    @survey_response = SurveyResponse.create do |s|
+    @survey_response = SurveyResponse.create! do |s|
       s.zip_code = params[:zip]
       s.latitude = @current_location[:latitude]
       s.longitude = @current_location[:longitude]
       s.food_description = params[:food_description]
-      s.prepared = params[:answer].to_i == 1 ? true : false
+      s.prepared = (params[:answer].to_i == 1)
     end
 
     session[:survey_response_uuid] = @survey_response.uuid
@@ -57,8 +57,8 @@ class PagesController < ApplicationController
   end
 
   def opened_post
-    @survey_response.opened = params[:answer].to_i == 1 ? true : false
-    @survey_response.save
+    @survey_response.opened = (params[:answer].to_i == 1)
+    @survey_response.save!
 
     # If its edible, send to next step
     if @survey_response.edible?
@@ -72,8 +72,8 @@ class PagesController < ApplicationController
   end
 
   def danger_zone_post
-    @survey_response.dangerous_temperature = params[:answer].to_i == 1 ? true : false
-    @survey_response.save
+    @survey_response.dangerous_temperature = (params[:answer].to_i == 1)
+    @survey_response.save!
 
     # If its edible, send to next step
     if @survey_response.edible?
@@ -87,8 +87,8 @@ class PagesController < ApplicationController
   end
 
   def age_post
-    @survey_response.old = params[:answer].to_i == 1 ? true : false
-    @survey_response.save
+    @survey_response.old = (params[:answer].to_i == 1)
+    @survey_response.save!
 
     # If not human consumable, redirect to results
     if @survey_response.edible?
@@ -102,13 +102,17 @@ class PagesController < ApplicationController
   end
 
   def distress_post
-    @survey_response.distressed = params[:answer].to_i == 1 ? true : false
-    @survey_response.save
+    @survey_response.distressed = (params[:answer].to_i == 1)
+    @survey_response.save!
 
     redirect_to "/results"
   end
 
   def results
+    @survey_response.completed = true
+    @survey_response.save!
+    session[:survey_response_uuid] = nil
+
     @foodshelf = Org.from_file( "foodshelf", 3 ).sort_by {|org| org.distance_from( @current_location ) }
     @pig = Org.from_file( "pig", 3 ).sort_by {|org| org.distance_from( @current_location ) }
     @compost = Org.from_file( "compost", 3 ).sort_by {|org| org.distance_from( @current_location ) }
