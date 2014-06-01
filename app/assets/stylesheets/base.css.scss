@@ -7,10 +7,12 @@
 
 /* Variables */
 $white: #ffffff;
+$black: #000000;
 $grey: grey;
 
 $orange: #bb5533;
 $orangeLight: #d48f79;
+$greenDark: #7d7d39;
 $green: #999955;
 $greenLight: #b3b376;
 
@@ -84,12 +86,18 @@ fieldset {
 			border-radius: 10px;
 			border: 1px solid grey;
 			background-color: $green;
-			color: $white;
+			color: $black;
 			font-weight: bold;
 			-webkit-box-shadow: 0 5px 10px 0 $grey;
 			box-shadow: 0 5px 10px 0 $grey;
 			&:hover, &:active {
 				background-color: $greenLight;
+			}
+			ul {
+				text-align: left;
+			}
+			h3 {
+				text-shadow: 2px 2px 2px $greenDark;
 			}
 		}
 		.example {
