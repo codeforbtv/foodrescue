@@ -3,7 +3,10 @@
 <%= notice %>
 
 <%= form_tag action: "type_post" do %>
-    Zip: <input name="zip" value="05401">
+    Zip: <input name="zip" value="">
+    What is it?: <input name="food_description" value="">
     <br>
-  <input type="submit" />
+    Is it prepared?
+    <button type="submit" value="1" name="answer">Yes</button>
+    <button type="submit" value="0" name="answer">No</button>
 <% end %>
