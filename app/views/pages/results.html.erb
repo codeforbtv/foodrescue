@@ -5,9 +5,9 @@
 	<% @foodshelf.each do |result| %>
 	    <li>
 	      <%= result['name'] %>
-	      (<%= result.distance_from(@current_location).round %> mi)
               <br />
               <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+	      (<%= result.distance_from(@current_location).round %> mi)
               <% if result['phone'] and result['phone'].length > 1 %>
 	          <br />
                   phone: <%= result['phone'] %>
@@ -26,9 +26,9 @@
 <% @pig.each do |result| %>
     <li>
              <%= result['name'] %>
-             (<%= result.distance_from(@current_location).round %> mi)
              <br />
              <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+             (<%= result.distance_from(@current_location).round %> mi)
              <% if result['phone'] and result['phone'].length > 1 %>
                  <br />
                  phone: <%= result['phone'] %>
@@ -44,9 +44,9 @@
 <% @compost.each do |result| %>
     <li>
              <%= result['name'] %>
-             (<%= result.distance_from(@current_location).round %> mi)
              <br />
              <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+             (<%= result.distance_from(@current_location).round %> mi)
              <% if result['phone'] and result['phone'].length > 1 %>
                  <br />
                  phone: <%= result['phone'] %>
