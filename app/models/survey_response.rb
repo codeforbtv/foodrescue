@@ -6,12 +6,6 @@ class SurveyResponse < ActiveRecord::Base
   end
 
   def edible?
-    edible = true
-
-    if self.opened or self.dangerous_temperature or self.old or self.distressed
-      edible = false
-    end
-
-    return edible
+    return !(self.opened or self.dangerous_temperature or self.old or self.distressed)
   end
 end
