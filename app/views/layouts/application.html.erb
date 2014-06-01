@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Food Rescue</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Foodrescue</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,17 +13,25 @@
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li><%= link_to_unless_current("Home", root_path) %></li>
-    </ul>
-</nav>
+  <header>
+      <div class="container">
+          <div class="logo"><%= link_to_unless_current("FoodRescue Vermont", root_path) %></li>
+      </div>
+  </header>
+  <main class="content">
+      <div class="container">
+        <%= yield %>
+      </div>
+  </main>
+  <footer>
+      <div class="container">
+          <p>A <a href="http://www.codeforbtv.org" alt="Code for BTV">Codeforbtv</a> collaborative project to benefit the <a href="http://www.vtfoodbank.org/" alt="Vermont Food Bank">Vermont Food Bank</a>.</p>
+      </div>
+  </footer>
 
-<% if @current_location %>
-<i>Looks like you're at <%= @current_location.inspect %> <%= @current_location.values %></i>
-<% end %>
 
-<%= yield %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
 </body>
 </html>

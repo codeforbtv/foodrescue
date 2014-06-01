@@ -1,10 +1,24 @@
-<h1>Opened</h1>
-
-<%= @survey_response.to_json %>
-
-<%= form_tag action: "opened_post" do %>
-    Is it Opened?
-    <button type="submit" value="1" name="answer">Yes</button>
-    <button type="submit" value="0" name="answer">No</button>
+<%= form_tag({ controller: "pages", action: "opened_post" }, class: "page-two") do %>
+    <h2>Has it been opened?</h2>
+    <fieldset class="options">
+        <div class="option option-1">
+            <button type="submit" value="1" name="answer">
+              <h3>It’s been opened/unsealed</h3>
+              <ul>
+                <li>The seal on packaging has been broken</li>
+                <li>Food has been exposed</li>
+              </ul>
+            </button>
+        </div>
+        <div class="option option-2">
+            <button type="submit" value="0" name="answer">
+              <h3>It's in the package</h3>
+              <ul>
+                <li>Packaging is securely closed</li>
+                <li>Free of punctures</li>
+              </ul>
+            </button>
+        </div>
+    </fieldset>
 <% end %>
 

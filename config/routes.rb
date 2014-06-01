@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 root 'pages#home'
 
+get 'zip-lookup' => 'pages#zip_lookup'
+
 post 'type' => 'pages#type_post'
 
 get 'opened' => 'pages#opened'

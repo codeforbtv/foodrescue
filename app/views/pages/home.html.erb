@@ -1,12 +1,70 @@
-<h1>Home</h1>
+<script type="text/javascript">
 
+$().ready(function() {
+	if (navigator && navigator.geolocation)
+		navigator.geolocation.getCurrentPosition(requestZip);
+});
+
+function requestZip(position) {
+	$.ajax({
+		url: "zip-lookup",
+		data: {
+			"lat": position.coords.latitude,
+			"long": position.coords.longitude },
+		success: function(zipCode) {
+            if ($("#zip").val() == "")
+                $("#zip").val(zipCode);
+        },
+        dataType: "text" });
+}
+
+</script>
+
+<% if notice && !notice.blank? %>
+<div style="border: 1px solid red; padding: .5em;">
 <%= notice %>
+</div>
+<% end %>
 
-<%= form_tag action: "type_post" do %>
-    Zip: <input name="zip" value="">
-    What is it?: <input name="food_description" value="">
-    <br>
-    Is it prepared?
-    <button type="submit" value="1" name="answer">Yes</button>
-    <button type="submit" value="0" name="answer">No</button>
+<%= form_tag({ controller: "pages", action: "type_post" }, class: "page-one") do %>
+    <fieldset>
+        <div class="form-group">
+            <label for="zip">Zip Code</label>
+            <input id="zip" type="text" name="zip" maxlength="5" placeholder="00000" pattern="\d{5}" required />
+        </div>
+        <div class="form-group">
+            <label for="description">What is the food item you are looking to donate?</label>
+            <input type="text" id="description" name="food_description" value="" required>
+        </div>
+    </fieldset>
+    <h2>Is this prepared food?</h2>
+    <fieldset class="options">
+        <button id="fake_submit" type="submit" value="0" style="position: absolute; left: -999em;"></button>
+        <div class="option option-1">
+            <button type="submit" value="0" name="answer">
+              <h3>Not Prepared</h3>
+              <ul>
+                <li>Fresh produce</li>
+                <li>Mislabeled products</li>
+                <li>Items with damaged packaging</li>
+                <li>Extra or slow moving inventory</li>
+              </ul>
+              <div class="example">
+                  <p>Produce, Dry Packaged, Dairy, etc.</p>
+              </div>
+            </button>
+        </div>
+        <div class="option option-2">
+            <button type="submit" value="1" name="answer">
+              <h3>Prepared/Cooked</h3>
+              <ul>
+                <li>Commercially prepared food</li>
+                <li>Commercially pre-packaged food items</li>
+              </ul>
+              <div class="example">
+                  <p>Lasagna, Sandwiches</p>
+              </div>
+            </button>
+        </div>
+    </fieldset>
 <% end %>

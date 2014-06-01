@@ -1,0 +1,121 @@
+/* Base Theme CSS */
+* {
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Variables */
+$white: #ffffff;
+$black: #000000;
+$grey: grey;
+
+$orange: #bb5533;
+$orangeLight: #d48f79;
+$greenDark: #7d7d39;
+$green: #999955;
+$greenLight: #b3b376;
+
+/* Headings */
+h1 {
+
+}
+h2 {
+
+}
+
+body, header, footer {
+	background-color: $orange;
+}
+header {
+	border-bottom: 2px solid $orangeLight;
+}
+footer {
+	border-top: 2px solid $orangeLight;
+}
+main {
+	background-color: $white;
+}
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+}
+header, footer {
+	color: $white;
+}
+header {
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: bold;
+}
+
+/* Forms */
+label {
+	font-weight: bold;
+	display: block;
+}
+input, textarea {
+	padding: 3px;
+	border: 1px solid $grey;
+	border-radius: 5px;
+}
+input {
+	&#zip {
+		width: 100px;
+	}
+}
+.form-group {
+	margin-bottom: 15px;
+}
+fieldset {
+	&.options {
+		width: 100%;
+		> .option {
+			float: left;
+			width: 48%;
+		}
+		> .option-1 {
+			margin-right: 4%;
+		}
+		button {
+			margin: 0 0 20px 0;
+			width: 100%;
+			min-height: 50px;
+			border-radius: 10px;
+			border: 1px solid grey;
+			background-color: $greenLight;
+			color: $black;
+			font-weight: bold;
+			-webkit-box-shadow: 0 5px 10px 0 $grey;
+			box-shadow: 0 5px 10px 0 $grey;
+			padding: 6px;
+			&:hover, &:active {
+				background-color: $green;
+			}
+			&:focus {
+				outline: none;
+				-webkit-box-shadow: 0 5px 10px 0 $orange;
+				box-shadow: 0 5px 10px 0 $orange;
+				border-color: $orange;
+			}
+			ul {
+				text-align: left;
+				margin: 10px 0;
+				padding: 0 0 0 20px;
+			}
+			h3 {
+				text-shadow: 1px 2px 1px $greenDark;
+				font-size: 24px;
+				line-height: 26px;
+				margin: 10px 0;
+			}
+		}
+		.example {
+			border: 1px solid $grey;
+			background-color: #ffdd11;
+			border-radius: 0 0 6px 6px;
+		}
+	}
+}

@@ -1,10 +1,25 @@
-<h1>Distress</h1>
-
-<%= @survey_response.to_json %>
-
-<%= form_tag action: "distress_post" do %>
-    Is it distressed?
-    <button type="submit" value="1" name="answer">Yes</button>
-    <button type="submit" value="0" name="answer">No</button>
+<%= form_tag({ controller: "pages", action: "distress_post" }, class: "page-four") do %>
+    <h2>What is the condition of your food?</h2>
+    <fieldset class="options">
+        <div class="option option-1">
+            <button type="submit" value="1" name="answer">
+              <h3>Signs of distress</h3>
+              <ul>
+                <li>Food is showing signs of degradation</li>
+                <li>Emitting a foul odor </li>
+                <li>Discolored</li>
+              </ul>
+            </button>
+        </div>
+        <div class="option option-2">
+            <button type="submit" value="0" name="answer">
+              <h3>Looks good!</h3>
+              <ul>
+                <li>Food is free of mold</li>
+                <li>Smells good</li>
+                <li>Looks fresh</li>
+              </ul>
+            </button>
+        </div>
+    </fieldset>
 <% end %>
-
