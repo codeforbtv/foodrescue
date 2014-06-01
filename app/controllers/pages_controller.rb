@@ -1,38 +1,44 @@
 class PagesController < ApplicationController
   before_filter :set_current_location
+  before_filter :load_survey_response
 
   BURLINGTON = Zips.find("05401")
 
     def home
-        survey_response = create_survey_response
-        save_survey_response(survey_response)
     end
 
     def type_post
-      found_zip = if params[:zip].present?
-                    set_location_from_zip params[:zip]
-                  end
+        errors = []
 
-      if !found_zip
-        redirect_to "/", :notice => "Please provide a zip code. We need to know where you are!"
-        return
-      end
+        found_zip = if params[:zip].present?
+                        set_location_from_zip params[:zip]
+                    end
 
-        survey_response = load_survey_response
+        if !found_zip
+            errors.push "Please provide a zip code. We need to know where you are!"
+        end
+        if not params[:food_description].present? or params[:food_description].empty?
+            errors.push "Please provide a description of the food."
+        end
 
-        survey_response.merge!({
-            "zip_code" => params[:zip] ? params[:zip] : nil,
-            "location" => params[:zip] ? @current_location : nil,
-            "food_description" => params[:food_description] ? params[:food_description] : nil,
-            "is_prepared" => params[:answer].to_i == 1 ? true : false
-        })
+        if errors.length != 0
+            redirect_to "/", :notice => errors.join(" ")
+            return
+        end
 
-        # TODO Validate that zip and description were submitted
+        # Create the new survey response
+        @survey_response = SurveyResponse.create do |s|
+            s.zip_code = params[:zip]
+            s.latitude = @current_location[:latitude]
+            s.longitude = @current_location[:longitude]
+            s.food_description = params[:food_description]
+            s.prepared = params[:answer].to_i == 1 ? true : false
+        end
 
-        save_survey_response(survey_response)
+        session[:survey_response_uuid] = @survey_response.uuid
 
         # If not human consumable, redirect to results
-        if survey_response["is_prepared"]
+        if @survey_response.prepared?
             redirect_to "/opened"
         else
             redirect_to "/distress"
@@ -43,16 +49,11 @@ class PagesController < ApplicationController
   end
 
     def opened_post
-        survey_response = load_survey_response
-
-        survey_response.merge!({
-            "is_opened" => params[:answer].to_i == 1 ? true : false
-        })
-
-        save_survey_response(survey_response)
+        @survey_response.opened = params[:answer].to_i == 1 ? true : false
+        @survey_response.save
 
         # If not human consumable, redirect to results
-        if survey_response["is_opened"]
+        if @survey_response.opened?
             redirect_to "/results"
         else
             redirect_to "/danger-zone"
@@ -63,16 +64,11 @@ class PagesController < ApplicationController
     end
 
     def danger_zone_post
-        survey_response = load_survey_response
-
-        survey_response.merge!({
-            "is_dangerous_temperature" => params[:answer].to_i == 1 ? true : false
-        })
-
-        save_survey_response(survey_response)
+        @survey_response.dangerous_temperature = params[:answer].to_i == 1 ? true : false
+        @survey_response.save
 
         # If not human consumable, redirect to results
-        if survey_response["is_dangerous_temperature"]
+        if @survey_response.dangerous_temperature?
             redirect_to "/results"
         else
             redirect_to "/age"
@@ -83,16 +79,11 @@ class PagesController < ApplicationController
     end
 
     def age_post
-        survey_response = load_survey_response
-
-        survey_response.merge!({
-            "is_too_old" => params[:answer].to_i == 1 ? true : false
-        })
-
-        save_survey_response(survey_response)
+        @survey_response.old = params[:answer].to_i == 1 ? true : false
+        @survey_response.save
 
         # If not human consumable, redirect to results
-        if survey_response["is_too_old"]
+        if @survey_response.old?
             redirect_to "/results"
         else
             redirect_to "/distress"
@@ -103,13 +94,8 @@ class PagesController < ApplicationController
     end
 
     def distress_post
-        survey_response = load_survey_response
-
-        survey_response.merge!({
-            "is_distressed" => params[:answer].to_i == 1 ? true : false
-        })
-
-        save_survey_response(survey_response)
+        @survey_response.distressed = params[:answer].to_i == 1 ? true : false
+        @survey_response.save
 
         redirect_to "/results"
     end
@@ -133,28 +119,9 @@ class PagesController < ApplicationController
         end
       end
 
+      def load_survey_response
+          uuid = session[:survey_response_uuid]
+          @survey_response = SurveyResponse.find_by(uuid: session[:survey_response_uuid])
+      end
 
-    # TODO: Move to SurveyResponse model
-
-        def load_survey_response
-            JSON.parse( session["survey_response"] )
-        end
-
-        def save_survey_response(survey_response)
-            session[:survey_response] = survey_response.to_json
-        end
-
-        def create_survey_response
-            return {
-                "id" => SecureRandom.uuid,
-                "zip_code" => nil,
-                "location" => nil,
-                "food_description" => nil,
-                "is_prepared" => nil,
-                "is_opened" => nil,
-                "is_distressed" => nil,
-                "is_too_old" => nil,
-                "is_dangerous_temperature" => nil
-            }
-        end
 end

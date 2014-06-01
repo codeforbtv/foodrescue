@@ -1,6 +1,7 @@
 <h1>Distress</h1>
 
-<%= session["survey_response"].to_json %>
+<%= @survey_response.to_json %>
+
 <%= form_tag action: "distress_post" do %>
     Is it distressed?
     <button type="submit" value="1" name="answer">Yes</button>
