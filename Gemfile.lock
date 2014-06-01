@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/alexch/geo_point.git
+  revision: 85e84bafe1983420c2530e5be198f849af4b104d
+  branch: patch-1
+  specs:
+    geo_point (0.2.6)
+      geo_calc (>= 0.7.7.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,8 +56,6 @@ GEM
       require_all (>= 1.2.0)
       sugar-high (>= 0.6.0)
       sweetloader
-    geo_point (0.2.6)
-      geo_calc (>= 0.7.7.1)
     geo_units (0.3.1.1)
       activesupport
       i18n
@@ -146,7 +152,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  geo_point
+  geo_point!
   hashie
   jbuilder (~> 2.0)
   jquery-rails
