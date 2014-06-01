@@ -1,0 +1,12 @@
+<%= result['name'] %>
+<br/>
+<%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+(<%= result.distance_from(@current_location).round %> mi)
+<% if result['phone'] and result['phone'].length > 1 %>
+    <br/>
+    phone: <%= result['phone'] %>
+<% end %>
+<% if result['email'] and result['email'].length > 1 %>
+    <br/>
+    <a href="mailto:<%= result['email'] %>"><%= result['email'] %></a>
+<% end %>
