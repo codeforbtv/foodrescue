@@ -14,10 +14,10 @@ class Org < Hash
   end
 
   def distance_from current_location
-    source = GeoPoint.new current_location
+    current_location.extend(Hashie::Extensions::SymbolizeKeys)
+    source = GeoPoint.new current_location.symbolize_keys
     target = GeoPoint.new latitude: self['lat'], longitude: self['lon']
     source.distance_to target
   end
 
 end
-

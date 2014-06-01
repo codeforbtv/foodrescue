@@ -35,5 +35,6 @@ then `open http://localhost:3000`
 
 ## Misc
 
-https://github.com/kristianmandrup/geo_point
+* https://github.com/kristianmandrup/geo_point
+* http://www.unitedstateszipcodes.org/zip-code-database/
 

@@ -14,8 +14,8 @@
     </ul>
 </nav>
 
-<% if session[:location] %>
-<h1>You are in <%= session[:location] %></h1>
+<% if @current_location %>
+<i>Looks like you're at <%= @current_location.inspect %> <%= @current_location.values %></i>
 <% end %>
 
 <%= yield %>

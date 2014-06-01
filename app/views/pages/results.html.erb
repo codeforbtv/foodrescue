@@ -4,8 +4,7 @@
 
     <li>
       <%= result['name'] %>
-        -
-      <%= result.distance_from(@current_location) %>
+      (<%= result.distance_from(@current_location) %> mi)
     </li>
 
 <% end %>
