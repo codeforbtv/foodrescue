@@ -114,7 +114,6 @@ class PagesController < ApplicationController
   def results
     @survey_response.completed = true
     @survey_response.save!
-    session[:survey_response_uuid] = nil
 
     @foodshelf = Org.from_file( "foodshelf" ).delete_if {|org| org.distance_from( @current_location ) >= 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
     @pig = Org.from_file( "pig" ).delete_if {|org| org.distance_from( @current_location ) >= 20 }.sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
