@@ -2,6 +2,7 @@
 
 <%= session["survey_response"].to_json %>
 <%= form_tag action: "danger_zone_post" do %>
+    Is it in the danger zone?
     <button type="submit" value="1" name="answer">Yes</button>
     <button type="submit" value="0" name="answer">No</button>
 <% end %>
