@@ -14,7 +14,7 @@
 	      <% end %>
               <% if result['email'] and result['email'].length > 1 %>
 	          <br />
-                  email: <a href="mailto:<%= result['email'] %>" >result['email']</a>
+                 <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
 	      <% end %>
 	    </li>
 	<% end %>
