@@ -37,7 +37,6 @@ class PagesController < ApplicationController
 
     session[:survey_response_uuid] = @survey_response.uuid
 
-    # If not human consumable, redirect to results
     if @survey_response.prepared?
       redirect_to "/opened"
     else
@@ -52,11 +51,11 @@ class PagesController < ApplicationController
     @survey_response.opened = params[:answer].to_i == 1 ? true : false
     @survey_response.save
 
-    # If not human consumable, redirect to results
-    if @survey_response.opened?
-      redirect_to "/results"
-    else
+    # If its edible, send to next step
+    if @survey_response.edible?
       redirect_to "/danger-zone"
+    else
+      redirect_to "/results"
     end
   end
 
@@ -67,11 +66,11 @@ class PagesController < ApplicationController
     @survey_response.dangerous_temperature = params[:answer].to_i == 1 ? true : false
     @survey_response.save
 
-    # If not human consumable, redirect to results
-    if @survey_response.dangerous_temperature?
-      redirect_to "/results"
-    else
+    # If its edible, send to next step
+    if @survey_response.edible?
       redirect_to "/age"
+    else
+      redirect_to "/results"
     end
   end
 
@@ -83,10 +82,10 @@ class PagesController < ApplicationController
     @survey_response.save
 
     # If not human consumable, redirect to results
-    if @survey_response.old?
-      redirect_to "/results"
-    else
+    if @survey_response.edible?
       redirect_to "/distress"
+    else
+      redirect_to "/results"
     end
   end
 
