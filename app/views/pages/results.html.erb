@@ -6,6 +6,16 @@
 	    <li>
 	      <%= result['name'] %>
 	      (<%= result.distance_from(@current_location).round %> mi)
+              <br />
+              <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+              <% if result['phone'] and result['phone'].length > 1 %>
+	          <br />
+                  phone: <%= result['phone'] %>
+	      <% end %>
+              <% if result['email'] and result['email'].length > 1 %>
+	          <br />
+                  email: <%= result['email'] %>
+	      <% end %>
 	    </li>
 	<% end %>
 <% else %>
@@ -15,15 +25,35 @@
 <h3>Pig Farms</h3>
 <% @pig.each do |result| %>
     <li>
-      <%= result['name'] %>
-      (<%= result.distance_from(@current_location).round %> mi)
+             <%= result['name'] %>
+             (<%= result.distance_from(@current_location).round %> mi)
+             <br />
+             <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+             <% if result['phone'] and result['phone'].length > 1 %>
+                 <br />
+                 phone: <%= result['phone'] %>
+             <% end %>
+             <% if result['email'] and result['email'].length > 1 %>
+                 <br />
+                 email: <%= result['email'] %>
+             <% end %>
     </li>
 <% end %>
 
 <h3>Composting Facilities</h3>
 <% @compost.each do |result| %>
     <li>
-      <%= result['name'] %>
-      (<%= result.distance_from(@current_location).round %> mi)
+             <%= result['name'] %>
+             (<%= result.distance_from(@current_location).round %> mi)
+             <br />
+             <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+             <% if result['phone'] and result['phone'].length > 1 %>
+                 <br />
+                 phone: <%= result['phone'] %>
+             <% end %>
+             <% if result['email'] and result['email'].length > 1 %>
+                 <br />
+                 email: <%= result['email'] %>
+             <% end %>
     </li>
 <% end %>
