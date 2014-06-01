@@ -1,7 +1,16 @@
+<div class="conversation">
+  Here are some places near <%= @current_location['city'] %>
+  where your <%= @survey_response.food_description %>
+  might find a new home...
+</div>
+
+
 <h1>Results</h1>
 
-<p>Thank for your inquiry, creating partnerships with local food distribution centers is a great way to help your community.</p>
-<p>Based on your answer, we recommend contacting the following resources for donation of your food.</p>
+<div class="results-message">
+  <p>Thanks for your inquiry! Creating partnerships with local food distribution centers is a great way to help your community.</p>
+  <p>Based on your answer, we recommend contacting the following resources for donation of your food.</p>
+</div>
 
 <div class="results">
   <section class="food-shelves">
@@ -11,7 +20,7 @@
           <%= render 'result', result: result, org_type: 'food' %>
         <% end %>
     <% else %>
-        <li>This food is not elligible to donate to a food shelf. Please see the other resources below</li>
+        <li>This food is not eligible to donate to a food shelf. Please see the other resources below</li>
     <% end %>
   </section>
 

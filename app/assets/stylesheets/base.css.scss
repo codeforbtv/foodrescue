@@ -9,9 +9,10 @@
 $white: #ffffff;
 $black: #000000;
 $grey: grey;
+$greyLight: #bbbbbb;
 
-$orange: #4d81a2;
-$orangeLight: #d48f79;
+$blue: #4d81a2;
+$blueLight: #d48f79;
 $greenDark: #7d7d39;
 $green: #b1d5aa;
 $greenLight: #F8F8F8;
@@ -30,7 +31,7 @@ text-decoration: none;
 }
 
 body, header, footer {
-	background-color: $orange;
+	background-color: $blue;
 }
 header {
 }
@@ -98,7 +99,7 @@ fieldset {
 			}
 			&:focus {
 				outline: none;
-				border-color: $orange;
+				border-color: $blue;
 			}
 			ul {
 				text-align: left;
@@ -116,4 +117,43 @@ fieldset {
 			background-color: #b7c6cc;
 		}
 	}
+}
+.results, .results-message {
+	text-align: left;
+}
+.results {
+	.icon {
+		margin: 0 10px 0 0;
+		img {
+			width: 85px;
+			height: auto;
+		}
+	}
+	.result {
+		clear: left;
+		margin-bottom: 15px;
+		min-height: 85px;
+		padding-right: 8px;
+		border-right: 3px solid $greyLight;
+		&:hover {
+			border-right-color: $blue;
+		}
+	}
+	h3 {
+		font-size: 24px;
+		line-height: 26px;
+		padding-bottom: 5px;
+		border-bottom: 3px solid $blue;
+	}
+	.distance {
+		font-size: 35px;
+	}
+	.name {
+		font-weight: bold;
+	}
+}
+
+/* Utility */
+.clearfix {
+	clear: both;
 }
