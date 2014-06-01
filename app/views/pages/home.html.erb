@@ -1,12 +1,44 @@
-<h1>Home</h1>
-
 <%= notice %>
 
-<%= form_tag action: "type_post" do %>
-    Zip: <input name="zip" value="">
-    What is it?: <input name="food_description" value="">
-    <br>
-    Is it prepared?
-    <button type="submit" value="1" name="answer">Yes</button>
-    <button type="submit" value="0" name="answer">No</button>
+<%= form_tag class: "page-one", action: "type_post" do %>
+    <fieldset>
+        <div class="form-group">
+            <label for="zip">Zip Code</label>
+            <input id="zip" type="text" name="zip" maxlength="5" placeholder="00000" pattern="\d{5}" />
+        </div>
+        <div class="form-group">
+            <label for="description">Please describe your food:</label>
+            <input id="description" name="food_description" value="">
+        </div>
+    </fieldset>
+    <fieldset>
+        <label>Is this prepared food?</label>
+    </fieldset>
+    <fieldset class="options">
+        <div class="option option-1">
+            <button type="submit" value="1" name="answer">
+              <strong>Not Prepared</strong><br />
+              <ul>
+                <li>Fresh produce</li>
+                <li>Mislabeled products</li>
+                <li>Items with damaged packaging</li>
+                <li>Extra or slow moving inventory</li>
+              </ul>
+              <div class="example">
+                  <p>produce, dry packaged, dairy, etc.</p>
+              </div>
+            </button>
+        </div>
+        <div class="option option-2">
+            <button type="submit" value="0" name="answer">
+              <strong>Prepared/Cooked</strong><br />
+              <ul>
+                <li>Blah</li>
+              </ul>
+              <div class="example">
+                  <p>Some examples</p>
+              </div>
+            </button>
+        </div>
+    </fieldset>
 <% end %>
