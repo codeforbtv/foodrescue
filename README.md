@@ -1,5 +1,7 @@
 ## Hi, We are FoodRescue
 
+Live at http://food-rescue.herokuapp.com
+
 This is on an MIT license
 
 This application helps people with surplus food determine how to dispose of it in accordance
@@ -32,6 +34,20 @@ rails s
 ```
 
 then `open http://localhost:3000`
+
+### Deploy
+
+Before deploying, you have to install the heroku toobelt and add the heroku remote to the repo.
+
+```shell
+heroku git:remote -a food-rescue
+```
+
+To deploy changes:
+
+```shell
+git push heroku master
+```
 
 ## Misc
 
