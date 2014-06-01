@@ -1,6 +1,6 @@
 <%= notice %>
 
-<%= form_tag class: "page-one", action: "type_post" do %>
+<%= form_tag({ controller: "pages", action: "type_post" }, class: "page-one") do %>
     <fieldset>
         <div class="form-group">
             <label for="zip">Zip Code</label>
