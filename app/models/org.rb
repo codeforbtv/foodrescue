@@ -6,7 +6,7 @@ class Org < Hash
 
   def self.from_file( org_type, count = 3 )
     raw = JSON.parse(File.read(Rails.root.join("data", org_type + ".json")))
-    raw.map{|h| new(h)}.first( count )
+    raw.map{|h| new(h)}
   end
 
   def initialize hash

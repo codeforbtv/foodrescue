@@ -16,13 +16,15 @@ class PagesController < ApplicationController
   def type_post
     errors = []
 
-    found_zip = if params[:zip].present?
-                  set_location_from_zip params[:zip]
-                end
-
-    if !found_zip
+    if params[:zip].present?
+      found_zip = set_location_from_zip params[:zip]
+      if !found_zip
+        errors.push "We don't think that is a Vermont zip code. Please try again!"
+      end
+    else
       errors.push "Please provide a zip code. We need to know where you are!"
     end
+
     if not params[:food_description].present? or params[:food_description].empty?
       errors.push "Please provide a description of the food."
     end
@@ -31,6 +33,7 @@ class PagesController < ApplicationController
     end
 
     if errors.length != 0
+      # todo: preserve entered values of zip and description    
       redirect_to "/", :notice => errors.join(" ")
       return
     end
@@ -113,9 +116,9 @@ class PagesController < ApplicationController
     @survey_response.save!
     session[:survey_response_uuid] = nil
 
-    @foodshelf = Org.from_file( "foodshelf", 3 ).sort_by {|org| org.distance_from( @current_location ) }
-    @pig = Org.from_file( "pig", 3 ).sort_by {|org| org.distance_from( @current_location ) }
-    @compost = Org.from_file( "compost", 3 ).sort_by {|org| org.distance_from( @current_location ) }
+    @foodshelf = Org.from_file( "foodshelf" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @pig = Org.from_file( "pig" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
+    @compost = Org.from_file( "compost" ).sort_by {|org| org.distance_from( @current_location ) }.first( 3 )
   end
 
   private
