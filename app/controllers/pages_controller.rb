@@ -4,124 +4,124 @@ class PagesController < ApplicationController
 
   BURLINGTON = Zips.find("05401")
 
-    def home
+  def home
+  end
+
+  def type_post
+    errors = []
+
+    found_zip = if params[:zip].present?
+                  set_location_from_zip params[:zip]
+                end
+
+    if !found_zip
+      errors.push "Please provide a zip code. We need to know where you are!"
+    end
+    if not params[:food_description].present? or params[:food_description].empty?
+      errors.push "Please provide a description of the food."
     end
 
-    def type_post
-        errors = []
-
-        found_zip = if params[:zip].present?
-                        set_location_from_zip params[:zip]
-                    end
-
-        if !found_zip
-            errors.push "Please provide a zip code. We need to know where you are!"
-        end
-        if not params[:food_description].present? or params[:food_description].empty?
-            errors.push "Please provide a description of the food."
-        end
-
-        if errors.length != 0
-            redirect_to "/", :notice => errors.join(" ")
-            return
-        end
-
-        # Create the new survey response
-        @survey_response = SurveyResponse.create do |s|
-            s.zip_code = params[:zip]
-            s.latitude = @current_location[:latitude]
-            s.longitude = @current_location[:longitude]
-            s.food_description = params[:food_description]
-            s.prepared = params[:answer].to_i == 1 ? true : false
-        end
-
-        session[:survey_response_uuid] = @survey_response.uuid
-
-        # If not human consumable, redirect to results
-        if @survey_response.prepared?
-            redirect_to "/opened"
-        else
-            redirect_to "/distress"
-        end
+    if errors.length != 0
+      redirect_to "/", :notice => errors.join(" ")
+      return
     end
+
+    # Create the new survey response
+    @survey_response = SurveyResponse.create do |s|
+      s.zip_code = params[:zip]
+      s.latitude = @current_location[:latitude]
+      s.longitude = @current_location[:longitude]
+      s.food_description = params[:food_description]
+      s.prepared = params[:answer].to_i == 1 ? true : false
+    end
+
+    session[:survey_response_uuid] = @survey_response.uuid
+
+    # If not human consumable, redirect to results
+    if @survey_response.prepared?
+      redirect_to "/opened"
+    else
+      redirect_to "/distress"
+    end
+  end
 
   def opened
   end
 
-    def opened_post
-        @survey_response.opened = params[:answer].to_i == 1 ? true : false
-        @survey_response.save
+  def opened_post
+    @survey_response.opened = params[:answer].to_i == 1 ? true : false
+    @survey_response.save
 
-        # If not human consumable, redirect to results
-        if @survey_response.opened?
-            redirect_to "/results"
-        else
-            redirect_to "/danger-zone"
-        end
+    # If not human consumable, redirect to results
+    if @survey_response.opened?
+      redirect_to "/results"
+    else
+      redirect_to "/danger-zone"
     end
+  end
 
-    def danger_zone
+  def danger_zone
+  end
+
+  def danger_zone_post
+    @survey_response.dangerous_temperature = params[:answer].to_i == 1 ? true : false
+    @survey_response.save
+
+    # If not human consumable, redirect to results
+    if @survey_response.dangerous_temperature?
+      redirect_to "/results"
+    else
+      redirect_to "/age"
     end
+  end
 
-    def danger_zone_post
-        @survey_response.dangerous_temperature = params[:answer].to_i == 1 ? true : false
-        @survey_response.save
+  def age
+  end
 
-        # If not human consumable, redirect to results
-        if @survey_response.dangerous_temperature?
-            redirect_to "/results"
-        else
-            redirect_to "/age"
-        end
+  def age_post
+    @survey_response.old = params[:answer].to_i == 1 ? true : false
+    @survey_response.save
+
+    # If not human consumable, redirect to results
+    if @survey_response.old?
+      redirect_to "/results"
+    else
+      redirect_to "/distress"
     end
+  end
 
-    def age
+  def distress
+  end
+
+  def distress_post
+    @survey_response.distressed = params[:answer].to_i == 1 ? true : false
+    @survey_response.save
+
+    redirect_to "/results"
+  end
+
+  def results
+    @results = Org.all.sort_by {|org| org.distance_from(@current_location) }
+  end
+
+  private
+
+  def set_current_location
+    @current_location ||= session[:location] || BURLINGTON
+  end
+
+  def set_location_from_zip zip
+    location_hash = Zips.find(zip)
+    if location_hash
+      @current_location = session[:location] = location_hash
+    else
+      false
     end
+  end
 
-    def age_post
-        @survey_response.old = params[:answer].to_i == 1 ? true : false
-        @survey_response.save
-
-        # If not human consumable, redirect to results
-        if @survey_response.old?
-            redirect_to "/results"
-        else
-            redirect_to "/distress"
-        end
-    end
-
-    def distress
-    end
-
-    def distress_post
-        @survey_response.distressed = params[:answer].to_i == 1 ? true : false
-        @survey_response.save
-
-        redirect_to "/results"
-    end
-
-    def results
-      @results = Org.all.sort_by {|org| org.distance_from(@current_location) }
-    end
-
-    private
-
-      def set_current_location
-        @current_location ||= session[:location] || BURLINGTON
-      end
-
-      def set_location_from_zip zip
-        location_hash = Zips.find(zip)
-        if location_hash
-          @current_location = session[:location] = location_hash
-        else
-          false
-        end
-      end
-
-      def load_survey_response
-          uuid = session[:survey_response_uuid]
-          @survey_response = SurveyResponse.find_by(uuid: session[:survey_response_uuid])
-      end
+  def load_survey_response
+    uuid = session[:survey_response_uuid]
+    @survey_response = SurveyResponse.find_by(uuid: session[:survey_response_uuid])
+  end
 
 end
