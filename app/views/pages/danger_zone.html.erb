@@ -1,9 +1,17 @@
-<h1>Danger Zone</h1>
-
-<%= session["survey_response"].to_json %>
-<%= form_tag action: "danger_zone_post" do %>
-    Is it in the danger zone?
-    <button type="submit" value="1" name="answer">Yes</button>
-    <button type="submit" value="0" name="answer">No</button>
+<%= form_tag({ controller: "pages", action: "danger_zone_post" }, class: "page-three") do %>
+    <h2>Has your food's temperature<br />been in “The Danger Zone”?</h2>
+    <fieldset class="options">
+        <div class="option option-1">
+            <button type="submit" value="0" name="answer">
+              <h3>It’s been refrigerated/frozen (below 40&deg;F) or above 140&deg;F at all times</h3>
+              <p>Perishable foods are kept stored and chilled at 40&deg;F or less, or frozen to 0&deg;F or less.  Frozen foods are without freezer burn and have never been defrosted.  Dairy products and meat are in original containers and refrigerated at 40&deg;, or frozen at all times.</p>
+            </button>
+        </div>
+        <div class="option option-2">
+            <button type="submit" value="1" name="answer">
+              <h3>It's been between 40&deg;F to 140&deg;F for over one hour</h3>
+              <p>This is considered the danger zone; food safety is the top priority.  Perishable foods are kept stored and chilled at 40&deg;F or less, or frozen to 0&deg;F or less.</p>
+            </button>
+        </div>
+    </fieldset>
 <% end %>
-

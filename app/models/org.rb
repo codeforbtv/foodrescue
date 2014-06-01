@@ -4,9 +4,9 @@ class Org < Hash
     from_file("foodshelf") + from_file("pig") + from_file("compost")
   end
 
-  def self.from_file org_type
+  def self.from_file( org_type, count = 3 )
     raw = JSON.parse(File.read(Rails.root.join("data", org_type + ".json")))
-    raw.map{|h| new(h)}
+    raw.map{|h| new(h)}.first( count )
   end
 
   def initialize hash
