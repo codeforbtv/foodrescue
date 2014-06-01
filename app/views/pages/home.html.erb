@@ -1,3 +1,36 @@
+<script type="text/javascript">
+
+window.onload = function() {
+	if (navigator && navigator.geolocation)
+		navigator.geolocation.getCurrentPosition(requestZip);
+}
+
+function requestZip(position) {
+	var xmlhttp;
+
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        	if ($("#zip").val() == "") { 
+			   document.getElementById("zip").value = xmlhttp.responseText;
+		   }
+        }
+    }
+
+    xmlhttp.open("GET", "zip-lookup?lat=" + position.coords.latitude
+    	+ "&long=" + position.coords.longitude, true);
+    xmlhttp.send();
+}
+
+</script>
+
 <%= notice %>
 
 <%= form_tag({ controller: "pages", action: "type_post" }, class: "page-one") do %>
@@ -13,9 +46,10 @@
     </fieldset>
     <h2>Is this prepared food?</h2>
     <fieldset class="options">
+        <button type="submit" value="0" style="position: absolute; left: -999em;"></button>
         <div class="option option-1">
             <button type="submit" value="0" name="answer">
-              <strong>Not Prepared</strong><br />
+              <h3>Not Prepared</h3>
               <ul>
                 <li>Fresh produce</li>
                 <li>Mislabeled products</li>
@@ -29,7 +63,7 @@
         </div>
         <div class="option option-2">
             <button type="submit" value="1" name="answer">
-              <strong>Prepared/Cooked</strong><br />
+              <h3>Prepared/Cooked</h3>
               <ul>
                 <li>Commercially prepared food</li>
                 <li>Commercially pre-packaged food items</li>
