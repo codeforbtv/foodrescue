@@ -20,6 +20,9 @@ class PagesController < ApplicationController
     if not params[:food_description].present? or params[:food_description].empty?
       errors.push "Please provide a description of the food."
     end
+    if not params[:answer].present?
+      errors.push "Please tell us whether your food was prepared or not."
+    end
 
     if errors.length != 0
       redirect_to "/", :notice => errors.join(" ")
