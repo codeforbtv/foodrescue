@@ -1,9 +1,41 @@
 <h1>Home</h1>
+<head><script type="text/javascript">
+
+window.onload = function() {
+	if (navigator && navigator.geolocation)
+		navigator.geolocation.getCurrentPosition(requestZip);
+}
+
+function requestZip(position) {
+	var xmlhttp;
+
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        	if ($("#zip_input").val() == "") { 
+			   document.getElementById("zip_input").value = xmlhttp.responseText;
+		   }
+        }
+    }
+
+    xmlhttp.open("GET", "zip-lookup?lat=" + position.coords.latitude
+    	+ "&long=" + position.coords.longitude, true);
+    xmlhttp.send();
+}
+
+</script></head>
 
 <%= notice %>
 
 <%= form_tag action: "type_post" do %>
-    Zip: <input name="zip" value="">
+    Zip: <input id="zip_input" name="zip" value="">
     What is it?: <input name="food_description" value="">
     <br>
     Is it prepared?
