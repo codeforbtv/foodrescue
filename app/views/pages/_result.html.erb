@@ -2,11 +2,11 @@
 <br/>
 <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
 (<%= result.distance_from(@current_location).round %> mi)
-<% if result['phone'] and result['phone'].length > 1 %>
+<% if result['phone'].present? %>
     <br/>
-    phone: <%= result['phone'] %>
+    phone: <a href="tel:<%= result['phone'] %>"><%= result['phone'] %></a>
 <% end %>
-<% if result['email'] and result['email'].length > 1 %>
+<% if result['email'].present? %>
     <br/>
     <a href="mailto:<%= result['email'] %>"><%= result['email'] %></a>
 <% end %>
