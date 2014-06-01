@@ -1,59 +1,67 @@
 <h1>Results</h1>
 
-<h3>Food Shelves</h3>
-<% if @survey_response.edible? =%>
-	<% @foodshelf.each do |result| %>
-	    <li>
-	      <%= result['name'] %>
-              <br />
-              <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
-	      (<%= result.distance_from(@current_location).round %> mi)
-              <% if result['phone'] and result['phone'].length > 1 %>
-	          <br />
-                  phone: <%= result['phone'] %>
-	      <% end %>
-              <% if result['email'] and result['email'].length > 1 %>
-	          <br />
-                 <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
-	      <% end %>
-	    </li>
-	<% end %>
-<% else %>
-	<li>This food is not elligible to donate to a food shelf. Please see the other resources below</li>
-<% end %>
+<div class="results">
+    <section class="food-shelves">
+        <h3><i></i>Food Shelves</h3>
+        <% if @survey_response.edible? =%>
+        	<% @foodshelf.each do |result| %>
+        	    <li>
+        	      <%= result['name'] %>
+                      <br />
+                      <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+        	      (<%= result.distance_from(@current_location).round %> mi)
+                      <% if result['phone'] and result['phone'].length > 1 %>
+        	          <br />
+                          phone: <%= result['phone'] %>
+        	      <% end %>
+                      <% if result['email'] and result['email'].length > 1 %>
+        	          <br />
+                         <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
+        	      <% end %>
+        	    </li>
+        	<% end %>
+        <% else %>
+        	<li>This food is not elligible to donate to a food shelf. Please see the other resources below</li>
+        <% end %>
+    </section><!-- END: section.food-shelves -->
 
-<h3>Pig Farms</h3>
-<% @pig.each do |result| %>
-    <li>
-             <%= result['name'] %>
-             <br />
-             <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
-             (<%= result.distance_from(@current_location).round %> mi)
-             <% if result['phone'] and result['phone'].length > 1 %>
-                 <br />
-                 phone: <%= result['phone'] %>
-             <% end %>
-             <% if result['email'] and result['email'].length > 1 %>
-                 <br />
-                 <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
-             <% end %>
-    </li>
-<% end %>
+    <section class="farms">
+        <h3><i></i>Pig Farms</h3>
+        <% @pig.each do |result| %>
+            <li>
+                     <%= result['name'] %>
+                     <br />
+                     <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+                     (<%= result.distance_from(@current_location).round %> mi)
+                     <% if result['phone'] and result['phone'].length > 1 %>
+                         <br />
+                         phone: <%= result['phone'] %>
+                     <% end %>
+                     <% if result['email'] and result['email'].length > 1 %>
+                         <br />
+                         <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
+                     <% end %>
+            </li>
+        <% end %>
+    </section><!-- END: section.farms -->
 
-<h3>Composting Facilities</h3>
-<% @compost.each do |result| %>
-    <li>
-             <%= result['name'] %>
-             <br />
-             <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
-             (<%= result.distance_from(@current_location).round %> mi)
-             <% if result['phone'] and result['phone'].length > 1 %>
-                 <br />
-                 phone: <%= result['phone'] %>
-             <% end %>
-             <% if result['email'] and result['email'].length > 1 %>
-                 <br />
-                 <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
-             <% end %>
-    </li>
-<% end %>
+    <section class="compost">
+        <h3><i></i>Composting Facilities</h3>
+        <% @compost.each do |result| %>
+            <li>
+                     <%= result['name'] %>
+                     <br />
+                     <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+                     (<%= result.distance_from(@current_location).round %> mi)
+                     <% if result['phone'] and result['phone'].length > 1 %>
+                         <br />
+                         phone: <%= result['phone'] %>
+                     <% end %>
+                     <% if result['email'] and result['email'].length > 1 %>
+                         <br />
+                         <a href="mailto:<%= result['email'] %>" ><%= result['email'] %></a>
+                     <% end %>
+            </li>
+        <% end %>
+    </section><!-- END: section.compost -->
+</div><!-- END div.results -->
