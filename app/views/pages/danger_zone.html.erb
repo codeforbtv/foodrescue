@@ -1,4 +1,8 @@
 <%= form_tag({ controller: "pages", action: "danger_zone_post" }, class: "page-three") do %>
+    <div class="conversation">
+      Okay! Sounds like some tasty <%= @survey_response.food_description %>.
+    </div>
+
     <h2>Has your food's temperature<br />been in “The Danger Zone”?</h2>
     <fieldset class="options">
         <div class="option option-1">
