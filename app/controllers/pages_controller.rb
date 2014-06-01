@@ -16,18 +16,21 @@ class PagesController < ApplicationController
   def type_post
     errors = []
 
-    found_zip = if params[:zip].present?
-                  set_location_from_zip params[:zip]
-                end
-
-    if !found_zip
+    if params[:zip].present?
+      found_zip = set_location_from_zip params[:zip]
+      if !found_zip
+        errors.push "We don't think that is a Vermont zip code. Please try again!"
+      end
+    else
       errors.push "Please provide a zip code. We need to know where you are!"
     end
+
     if not params[:food_description].present? or params[:food_description].empty?
       errors.push "Please provide a description of the food."
     end
 
     if errors.length != 0
+      # todo: preserve entered values of zip and description    
       redirect_to "/", :notice => errors.join(" ")
       return
     end

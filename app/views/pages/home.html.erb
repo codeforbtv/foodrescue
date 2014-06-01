@@ -1,37 +1,30 @@
 <script type="text/javascript">
 
-window.onload = function() {
+$().ready(function() {
 	if (navigator && navigator.geolocation)
 		navigator.geolocation.getCurrentPosition(requestZip);
-}
+});
 
 function requestZip(position) {
-	var xmlhttp;
-
-    if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp = new XMLHttpRequest();
-    } else {
-        // code for IE6, IE5
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        	if ($("#zip").val() == "") { 
-			   document.getElementById("zip").value = xmlhttp.responseText;
-		   }
-        }
-    }
-
-    xmlhttp.open("GET", "zip-lookup?lat=" + position.coords.latitude
-    	+ "&long=" + position.coords.longitude, true);
-    xmlhttp.send();
+	$.ajax({
+		url: "zip-lookup",
+		data: {
+			"lat": position.coords.latitude,
+			"long": position.coords.longitude },
+		success: function(zipCode) {
+            if ($("#zip").val() == "")
+                $("#zip").val(zipCode);
+        },
+        dataType: "text" });
 }
 
 </script>
 
+<% if notice && !notice.blank? %>
+<div style="border: 1px solid red; padding: .5em;">
 <%= notice %>
+</div>
+<% end %>
 
 <%= form_tag({ controller: "pages", action: "type_post" }, class: "page-one") do %>
     <fieldset>
