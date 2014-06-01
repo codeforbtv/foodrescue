@@ -1,12 +1,44 @@
-<%= result['name'] %>
-<br/>
-<%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
-(<%= result.distance_from(@current_location).round %> mi)
-<% if result['phone'].present? %>
-    <br/>
-    phone: <a href="tel:<%= result['phone'] %>"><%= result['phone'] %></a>
-<% end %>
-<% if result['email'].present? %>
-    <br/>
-    <a href="mailto:<%= result['email'] %>"><%= result['email'] %></a>
-<% end %>
+<style>
+  .result, .result div {
+      border: 1px dashed blue;
+  }
+
+  .result .distance {
+      font-size: 48pt;
+  }
+
+
+        .result {
+            margin-bottom: 6px;
+        }
+</style>
+
+<div class="result">
+
+  <div class="distance" style="float: right">
+    <%= result.distance_from(@current_location).round %> mi
+  </div>
+
+  <div class="icon" style="float:left">
+    <img src="prototype/images/icon-pig.png" />
+  </div>
+
+  <div class="name">
+    <%= result['name'] %>
+  </div>
+
+  <div class="address">
+    <%= result['address'] %>, <%= result['city'] %>, <%= result['state'] %>
+    <% if result['phone'].present? %>
+        <br/>
+        phone: <a href="tel:<%= result['phone'] %>"><%= result['phone'] %></a>
+    <% end %>
+    <% if result['email'].present? %>
+        <br/>
+        <a href="mailto:<%= result['email'] %>"><%= result['email'] %></a>
+    <% end %>
+  </div>
+
+  <br clear=both>
+
+</div>
