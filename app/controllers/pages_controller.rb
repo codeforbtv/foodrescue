@@ -2,10 +2,16 @@ class PagesController < ApplicationController
   before_filter :set_current_location
   before_filter :load_survey_response
 
-  BURLINGTON = Zips.find("05401")
+  BURLINGTON = Zips.find_from_zip("05401")
 
   def home
   end
+
+	def zip_lookup
+		lat = params[:lat].to_f
+		long = params[:long].to_f
+		render json: Zips.find_from_lat_long(lat, long)
+	end
 
   def type_post
     errors = []
@@ -115,7 +121,7 @@ class PagesController < ApplicationController
     end
 
     def set_location_from_zip zip
-      location_hash = Zips.find(zip)
+      location_hash = Zips.find_from_zip(zip)
       if location_hash
         @current_location = session[:location] = location_hash
       else

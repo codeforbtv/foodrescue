@@ -2,7 +2,7 @@ require 'csv'
 
 class Zips
   def self.load
-    file = Rails.root.join("data", "zip_code_database.csv")
+    file = Rails.root.join("data", "vt_zips.csv")
     puts "reading csv"
     @lookup = {}
     headers = nil
@@ -22,8 +22,22 @@ class Zips
     end
   end
 
-  def self.find zip
+  def self.find_from_zip zip
     load unless @lookup
     @lookup[zip]
   end
+  
+  def self.find_from_lat_long browser_lat, browser_long
+  	load unless @lookup
+  	@lookup.sort_by do |key, value| 
+  		distance_from(browser_lat, browser_long, value) 
+  	end.first.first
+  end
+  
+  def self.distance_from browser_lat, browser_long, loc
+  	  source = GeoPoint.new latitude: loc[:latitude], longitude: loc[:longitude]
+  	  target = GeoPoint.new latitude: browser_lat, longitude: browser_long
+  	  source.distance_to target  	
+  end
+  
 end
