@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140601165744) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "survey_responses", force: true do |t|
     t.string   "uuid",                  limit: 40
     t.string   "food_description",      limit: 100
