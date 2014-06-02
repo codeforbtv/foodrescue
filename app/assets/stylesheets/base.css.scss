@@ -85,22 +85,38 @@ fieldset {
 		> .option-1 {
 			margin-right: 4%;
 		}
-		button {
-			margin: 0 0 20px 0;
-			width: 100%;
-			min-height: 50px;
-
-			background-color: $greenLight;
-			color: $black;
-			font-weight: bold;
-			padding: 6px;
-			&:hover, &:active {
-				background-color: $green;
-			}
-			&:focus {
-				outline: none;
-				border-color: $blue;
-			}
+        button {
+            -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            box-shadow:inset 0px 1px 0px 0px #ffffff;
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fff), color-stop(1, #e7e7e7) );
+            background:-moz-linear-gradient( center top, #fff 5%, #e7e7e7 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#e7e7e7');
+            background-color:#ededed;
+            -webkit-border-top-left-radius:40px;
+            -moz-border-radius-topleft:40px;
+            border-top-left-radius:40px;
+            -webkit-border-top-right-radius:40px;
+            -moz-border-radius-topright:40px;
+            border-top-right-radius:40px;
+            -webkit-border-bottom-right-radius:40px;
+            -moz-border-radius-bottomright:40px;
+            border-bottom-right-radius:40px;
+            -webkit-border-bottom-left-radius:40px;
+            -moz-border-radius-bottomleft:40px;
+            border-bottom-left-radius:40px;
+            text-indent:0;
+            border:1px solid #dcdcdc;
+            display:inline-block;
+            color: #666;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            font-style:normal;
+            text-decoration:none;
+            text-align:center;
+            text-shadow:1px 1px 0px #ffffff;
+            padding: 20px;
 			ul {
 				text-align: left;
 				margin: 10px 0;
@@ -111,10 +127,23 @@ fieldset {
 				line-height: 26px;
 				margin: 10px 0;
 			}
-		}
+        }
+        button:hover {
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, lighten($green, 20%)), color-stop(1, $green) );
+            background:-moz-linear-gradient( center top, lighten($green, 20%) 5%, $green 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten($green, 20%)', endColorstr='$green');
+            background-color:$green;
+        }
+        button:active {
+            position:relative;
+            top:1px;
+        }
 		.example {
 			border: 1px solid $grey;
 			background-color: #b7c6cc;
+            border-radius: 15px;
+            text-shadow: none;
+            padding: 5px 15px;
 		}
 	}
 }
