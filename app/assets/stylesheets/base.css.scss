@@ -22,7 +22,10 @@ h1 {
 
 }
 h2 {
-
+    font-size: 28px;
+    line-height: 1.1em;
+    margin: 1.5em 0 0.5em;
+    color: #333;
 }
 
 a {
@@ -50,6 +53,7 @@ footer {
 }
 main {
 	background-color: $white;
+    padding-bottom: 2em;
 }
 .container {
 	max-width: 600px;
@@ -134,7 +138,7 @@ fieldset {
 			}
 			h3 {
 				font-size: 24px;
-				line-height: 26px;
+				line-height: 1em;
 				margin: 10px 0;
 			}
         }
