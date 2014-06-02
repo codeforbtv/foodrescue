@@ -11,3 +11,10 @@ div.conversation {
   font-style: italic;
   margin: 0 0 1em;
 }
+
+.not-eligible {
+    background: lighten(orange, 30%);
+    border: 3px solid lighten(orange, 20%);
+    padding: 20px;
+    border-radius: 15px;
+}

@@ -7,13 +7,13 @@
 
 <div class="results">
   <section class="food-shelves">
-    <h3><i></i>Food Shelves</h3>
+    <h3>Food Shelves</h3>
     <% if @survey_response.edible? %>
         <% @foodshelf.each do |result| %>
           <%= render 'result', result: result, org_type: 'food' %>
         <% end %>
     <% else %>
-        <li>This food is not eligible to donate to a food shelf. Please see the other resources below</li>
+        <p class="not-eligible">This food is not eligible to donate to a food shelf.<br />Please see the other resources below.</p>
     <% end %>
   </section>
 
