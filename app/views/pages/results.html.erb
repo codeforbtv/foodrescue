@@ -13,7 +13,14 @@
           <%= render 'result', result: result, org_type: 'food' %>
         <% end %>
     <% else %>
-        <p class="not-eligible">This food is not eligible to donate to a food shelf.<br />Please see the other resources below.</p>
+        <p class="not-eligible">
+            This food is not eligible to donate to a food shelf because
+            <% if @survey_response.opened %>it was opened<% end %>
+            <% if @survey_response.old %>it is older than 3 days<% end %>
+            <% if @survey_response.dangerous_temperature %>it was in "The Danger Zone" for temperature<% end %>
+            <% if @survey_response.distressed %>it is visibly distressed<% end %>
+            . See the list of farms and composters below for ways to dispose of this food.
+        </p>
     <% end %>
   </section>
 
