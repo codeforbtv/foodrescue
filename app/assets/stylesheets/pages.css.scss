@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.conversation {
-  border: 2px solid darkgreen;
-  background: lightblue;
+  border: 2px solid #b1d5aa;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 18px;
+  background: lighten(#b1d5aa, 15%);
   font-style: italic;
 }
