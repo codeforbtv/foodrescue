@@ -12,10 +12,17 @@ frv.util = {
 	},
 	sel: {
 		input: 'input',
-		fake_submit: '#fake_submit'
+		fake_submit: '#fake_submit',
+        options: '.options',
+        option: '.option button'
 	},
 	init: function() {
 		var _this = this;
+
+        $(this.sel.options).equalize({
+            equalize: 'outerHeight',
+            children: this.sel.option
+        });
 
 		_this.formEnterDisable();
 		_this.fakeSubmitHelper();
