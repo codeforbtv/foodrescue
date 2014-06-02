@@ -12,7 +12,7 @@ $grey: grey;
 $greyLight: #bbbbbb;
 
 $blue: #4d81a2;
-$blueLight: #d48f79;
+$orange: #d48f79;
 $greenDark: #7d7d39;
 $green: #b1d5aa;
 $greenLight: #F8F8F8;
@@ -26,8 +26,12 @@ h2 {
 }
 
 a {
-color: #d48f79;	
-text-decoration: none;
+    color: $orange;	
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
 }
 
 body, header, footer {
@@ -37,7 +41,12 @@ header {
 }
 
 footer {
-
+    a {
+        color: $green;
+    }
+    a:hover, a:active {
+        text-decoration: underline;
+    }
 }
 main {
 	background-color: $white;
