@@ -6,7 +6,7 @@
 </div>
 
 <div class="results">
-  <section class="food-shelves">
+  <section class="food-shelves<% if @survey_response.edible? %> eligible<% end %>">
     <h3>Food Shelves</h3>
     <% if @survey_response.edible? %>
         <% @foodshelf.each do |result| %>
