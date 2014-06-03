@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class SurveyFlowsTest < ActionDispatch::IntegrationTest
-  test "human inedible human edible prepared food" do
+  test "human edible prepared food" do
     visit_home
     food_is_prepared
     food_is_unopened
