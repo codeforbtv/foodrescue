@@ -37,7 +37,7 @@ then `open http://localhost:3000`
 
 ### Deploy
 
-Before deploying, you have to install the heroku toobelt and add the heroku remote to the repo.
+Before deploying, you have to install the heroku toolbelt and add the heroku remote to the repo.
 
 ```shell
 heroku git:remote -a food-rescue
