@@ -56,17 +56,51 @@
 <script type="text/javascript">
 var foodRescue = foodRescue || {};
 
-foodRescue.home = function() {
-    var $lat = $('#lat'),
-        $long = $('#long'),
-        $zip = $('#zip');
+foodRescue.home = {
+    position: null,
+    zipLookupUrl: '/zip-lookup',
+    on: {
+        zipChange: function(e) {
+            var geocodedZip = this.$zip.data('geocoded') || '',
+                userZip = $.trim(this.$zip.val());
 
-    var handleCurrentPosition = function(position) {
-        $lat.val(position.coords.latitude);
-        $long.val(position.coords.longitude);
+            // User zip different from geocoded zip
+            if (userZip != geocodedZip) {
+                this.clearLatLong();
+
+            // User entered the same zip code that was original geocoded
+            } else if (this.position && geocodedZip && (geocodedZip == userZip)) {
+                this.updateLatLongFromPosition(this.position);
+            }
+        }
+    },
+    init: function() {
+        this.$lat = $('#lat');
+        this.$long = $('#long');
+        this.$zip = $('#zip');
+
+        this.setupEvents();
+
+        this.getCurrentPosition();
+    },
+    setupEvents: function() {
+        this.$zip.on('change keyup', $.proxy(this.on.zipChange, this));
+    },
+    getCurrentPosition: function() {
+        if (navigator && !navigator.geolocation) {
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition($.proxy(this.updatePosition, this));
+    },
+    updatePosition: function(position) {
+        var $zip = this.$zip;
+
+        this.position = position;
+        this.updateLatLongFromPosition(position);
 
         $.ajax({
-                url: "zip-lookup",
+                url: this.zipLookupUrl,
                 dataType: "text",
                 data: {
                     "lat": position.coords.latitude,
@@ -74,16 +108,21 @@ foodRescue.home = function() {
                 }
             })
             .done(function(zipCode) {
-                if ($zip.val() == "") {
+                if ($.trim($zip.val()) == "") {
                     $zip.val(zipCode);
+                    $zip.data('geocoded', zipCode);
                 }
             });
-    }
-
-    if (navigator && navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(handleCurrentPosition);
+    },
+    clearLatLong: function() {
+        this.$lat.val('');
+        this.$long.val('');
+    },
+    updateLatLongFromPosition: function(position) {
+        this.$lat.val(position.coords.latitude);
+        this.$long.val(position.coords.longitude);
     }
 };
 
-foodRescue.home();
+foodRescue.home.init();
 </script>
