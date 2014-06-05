@@ -57,22 +57,27 @@
 var foodRescue = foodRescue || {};
 
 foodRescue.home = function() {
+    var $lat = $('#lat'),
+        $long = $('#long'),
+        $zip = $('#zip');
+
     var handleCurrentPosition = function(position) {
-        $('#lat').val(position.coords.latitude);
-        $('#long').val(position.coords.longitude);
+        $lat.val(position.coords.latitude);
+        $long.val(position.coords.longitude);
+
         $.ajax({
-            url: "zip-lookup",
-            data: {
-                "lat": position.coords.latitude,
-                "long": position.coords.longitude 
-            },
-            success: function(zipCode) {
-                if ($("#zip").val() == "") {
-                    $("#zip").val(zipCode);
+                url: "zip-lookup",
+                dataType: "text",
+                data: {
+                    "lat": position.coords.latitude,
+                    "long": position.coords.longitude 
                 }
-            },
-            dataType: "text"
-        });
+            })
+            .done(function(zipCode) {
+                if ($zip.val() == "") {
+                    $zip.val(zipCode);
+                }
+            });
     }
 
     if (navigator && navigator.geolocation) {
