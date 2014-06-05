@@ -1,25 +1,3 @@
-<script type="text/javascript">
-
-$(document).ready(function() {
-	if (navigator && navigator.geolocation)
-		navigator.geolocation.getCurrentPosition(requestZip);
-});
-
-function requestZip(position) {
-	$.ajax({
-		url: "zip-lookup",
-		data: {
-			"lat": position.coords.latitude,
-			"long": position.coords.longitude },
-		success: function(zipCode) {
-            if ($("#zip").val() == "")
-                $("#zip").val(zipCode);
-        },
-        dataType: "text" });
-}
-
-</script>
-
 <div class="conversation">
     <p>Please answer a few questions so we can recommend resources for donating or composting your surplus food.</p>
 </div>
@@ -35,6 +13,8 @@ function requestZip(position) {
         <div class="form-group">
             <label for="zip">Zip Code</label>
             <input id="zip" type="text" name="zip" maxlength="5" placeholder="00000" pattern="\d{5}" required />
+            <input id="lat" type="hidden" name="lat" />
+            <input id="long" type="hidden" name="long" />
         </div>
         <div class="form-group">
             <label for="description">What is the food item you are looking to donate?</label>
@@ -72,3 +52,33 @@ function requestZip(position) {
         </div>
     </fieldset>
 <% end %>
+
+<script type="text/javascript">
+var foodRescue = foodRescue || {};
+
+foodRescue.home = function() {
+    var handleCurrentPosition = function(position) {
+        $('#lat').val(position.coords.latitude);
+        $('#long').val(position.coords.longitude);
+        $.ajax({
+            url: "zip-lookup",
+            data: {
+                "lat": position.coords.latitude,
+                "long": position.coords.longitude 
+            },
+            success: function(zipCode) {
+                if ($("#zip").val() == "") {
+                    $("#zip").val(zipCode);
+                }
+            },
+            dataType: "text"
+        });
+    }
+
+    if (navigator && navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(handleCurrentPosition);
+    }
+};
+
+foodRescue.home();
+</script>
