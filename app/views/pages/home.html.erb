@@ -1,25 +1,3 @@
-<script type="text/javascript">
-
-$(document).ready(function() {
-	if (navigator && navigator.geolocation)
-		navigator.geolocation.getCurrentPosition(requestZip);
-});
-
-function requestZip(position) {
-	$.ajax({
-		url: "zip-lookup",
-		data: {
-			"lat": position.coords.latitude,
-			"long": position.coords.longitude },
-		success: function(zipCode) {
-            if ($("#zip").val() == "")
-                $("#zip").val(zipCode);
-        },
-        dataType: "text" });
-}
-
-</script>
-
 <div class="conversation">
     <p>Please answer a few questions so we can recommend resources for donating or composting your surplus food.</p>
 </div>
@@ -35,6 +13,8 @@ function requestZip(position) {
         <div class="form-group">
             <label for="zip">Zip Code</label>
             <input id="zip" type="text" name="zip" maxlength="5" placeholder="00000" pattern="\d{5}" required />
+            <input id="lat" type="hidden" name="lat" />
+            <input id="long" type="hidden" name="long" />
         </div>
         <div class="form-group">
             <label for="description">What is the food item you are looking to donate?</label>
@@ -72,3 +52,77 @@ function requestZip(position) {
         </div>
     </fieldset>
 <% end %>
+
+<script type="text/javascript">
+var foodRescue = foodRescue || {};
+
+foodRescue.home = {
+    position: null,
+    zipLookupUrl: '/zip-lookup',
+    on: {
+        zipChange: function(e) {
+            var geocodedZip = this.$zip.data('geocoded') || '',
+                userZip = $.trim(this.$zip.val());
+
+            // User zip different from geocoded zip
+            if (userZip != geocodedZip) {
+                this.clearLatLong();
+
+            // User entered the same zip code that was original geocoded
+            } else if (this.position && geocodedZip && (geocodedZip == userZip)) {
+                this.updateLatLongFromPosition(this.position);
+            }
+        }
+    },
+    init: function() {
+        this.$lat = $('#lat');
+        this.$long = $('#long');
+        this.$zip = $('#zip');
+
+        this.setupEvents();
+
+        this.getCurrentPosition();
+    },
+    setupEvents: function() {
+        this.$zip.on('change keyup', $.proxy(this.on.zipChange, this));
+    },
+    getCurrentPosition: function() {
+        if (navigator && !navigator.geolocation) {
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition($.proxy(this.updatePosition, this));
+    },
+    updatePosition: function(position) {
+        var $zip = this.$zip;
+
+        this.position = position;
+        this.updateLatLongFromPosition(position);
+
+        $.ajax({
+                url: this.zipLookupUrl,
+                dataType: "text",
+                data: {
+                    "lat": position.coords.latitude,
+                    "long": position.coords.longitude 
+                }
+            })
+            .done(function(zipCode) {
+                if ($.trim($zip.val()) == "") {
+                    $zip.val(zipCode);
+                    $zip.data('geocoded', zipCode);
+                }
+            });
+    },
+    clearLatLong: function() {
+        this.$lat.val('');
+        this.$long.val('');
+    },
+    updateLatLongFromPosition: function(position) {
+        this.$lat.val(position.coords.latitude);
+        this.$long.val(position.coords.longitude);
+    }
+};
+
+foodRescue.home.init();
+</script>

@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     errors = []
 
     if params[:zip].present?
-      found_zip = set_location_from_zip params[:zip]
+      found_zip = set_location_from_zip params[:zip], params[:lat], params[:long]
       if !found_zip
         errors.push "We don't think that is a Vermont zip code. Please try again!"
       end
@@ -40,6 +40,7 @@ class PagesController < ApplicationController
 
     # Create the new survey response
     @survey_response = SurveyResponse.create! do |s|
+      s.respondent_ip = request.remote_ip
       s.zip_code = params[:zip]
       s.latitude = @current_location[:latitude]
       s.longitude = @current_location[:longitude]
@@ -124,12 +125,14 @@ class PagesController < ApplicationController
   private
 
     def set_current_location
-      @current_location ||= session[:location] || BURLINGTON
+      @current_location ||= session[:location]
     end
 
-    def set_location_from_zip zip
+    def set_location_from_zip zip, lat = nil, long = nil
       location_hash = Zips.find_from_zip(zip)
       if location_hash
+        location_hash[:latitude] = lat.present? ? lat.to_f : location_hash[:latitude]
+        location_hash[:longitude] = long.present? ? long.to_f : location_hash[:longitude]
         @current_location = session[:location] = location_hash
       else
         false
