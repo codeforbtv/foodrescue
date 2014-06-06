@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601165744) do
+ActiveRecord::Schema.define(version: 20140606002052) do
 
   create_table "survey_responses", force: true do |t|
     t.string   "uuid",                  limit: 40
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140601165744) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "completed",                                                  default: false, null: false
+    t.string   "respondent_ip",         limit: 45
   end
 
 end

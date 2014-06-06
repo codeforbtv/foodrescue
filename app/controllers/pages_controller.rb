@@ -40,6 +40,7 @@ class PagesController < ApplicationController
 
     # Create the new survey response
     @survey_response = SurveyResponse.create! do |s|
+      s.respondent_ip = request.remote_ip
       s.zip_code = params[:zip]
       s.latitude = @current_location[:latitude]
       s.longitude = @current_location[:longitude]
