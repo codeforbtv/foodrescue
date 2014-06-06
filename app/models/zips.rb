@@ -27,16 +27,16 @@ class Zips
     @lookup[zip]
   end
   
-  def self.find_from_lat_long browser_lat, browser_long
+  def self.find_from_lat_long lat, long
   	load unless @lookup
   	@lookup.sort_by do |key, value| 
-  		distance_from(browser_lat, browser_long, value) 
+  		distance_from(lat, long, value) 
   	end.first.first
   end
   
-  def self.distance_from browser_lat, browser_long, loc
+  def self.distance_from lat, long, loc
   	  source = GeoPoint.new latitude: loc[:latitude], longitude: loc[:longitude]
-  	  target = GeoPoint.new latitude: browser_lat, longitude: browser_long
+  	  target = GeoPoint.new latitude: lat, longitude: long
   	  source.distance_to target  	
   end
   

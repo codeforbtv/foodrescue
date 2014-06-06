@@ -130,8 +130,8 @@ class PagesController < ApplicationController
     def set_location_from_zip zip, lat = nil, long = nil
       location_hash = Zips.find_from_zip(zip)
       if location_hash
-        location_hash[:latitude] = lat || location_hash[:latitude]
-        location_hash[:longitude] = long || location_hash[:longitude]
+        location_hash[:latitude] = lat.present? ? lat.to_f : location_hash[:latitude]
+        location_hash[:longitude] = long.present? ? long.to_f : location_hash[:longitude]
         @current_location = session[:location] = location_hash
       else
         false
